@@ -1,0 +1,124 @@
+{
+  "appVersion": "1.0.0",
+  "raceDate": "2027-03-07",
+  "phases": [
+    {
+      "id": "phase1",
+      "label": "PHASE 1",
+      "name": "基礎建立期",
+      "color": "#ff3f9f",
+      "startDate": "2026-10-26",
+      "endDate": "2026-11-22",
+      "weeks": 4,
+      "weeklyRuns": 3,
+      "workouts": [
+        {"date":"2026-10-27","week":1,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":6,"summary":"6K @ 6:00–6:30 /km","plans":{"main":{"title":"主課表","steps":["6 KM Easy Run @ 6:00–6:30 /km","跑後 8–10 分鐘腿後側、小腿與臀部伸展"],"note":"重點是放鬆與找回節奏，不追速度。"},"rain":{"title":"雨備課表","steps":["飛輪 35–40 分鐘，RPE 4–5","核心 12 分鐘：dead bug、side plank、bird dog","小腿提踵 3 × 15"],"note":"維持有氧刺激，不做高強度。"},"fatigue":{"title":"疲勞備案","steps":["快走 8,000–10,000 步，分段完成可","或負重背心走路 25–30 分鐘（輕負重）","髖與小腿活動度 10 分鐘"],"note":"疲勞可以降級，但不要把活動量直接歸零。"}}},
+        {"date":"2026-10-29","week":1,"type":"Tempo","shortLabel":"TEMPO","title":"節奏跑（短）","distanceKm":7,"summary":"2K Easy + 3K @ 5:20–5:35 + 2K Easy","plans":{"main":{"title":"主課表","steps":["2 KM Easy @ 6:10–6:30 /km","3 KM Tempo @ 5:20–5:35 /km","2 KM Easy @ 6:10–6:30 /km"],"note":"速度感要穩，不要跑成間歇。"},"rain":{"title":"雨備課表","steps":["飛輪 10 分鐘熱身","飛輪 3 × 6 分鐘中高強度，組間 3 分鐘輕鬆","核心 10–12 分鐘"],"note":"用連續踩踏模擬節奏跑的穩定輸出。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 Easy 30 分鐘","快走至少 8,000 步","臀中肌與小腿肌耐力各 2–3 組"],"note":"若只是工作疲勞就保留活動；若有疼痛則休息。"}}},
+        {"date":"2026-11-01","week":1,"type":"LSD","shortLabel":"LSD","title":"長距離 LSD","distanceKm":16,"summary":"16K @ 5:50–6:20 /km","plans":{"main":{"title":"主課表","steps":["16 KM LSD @ 5:50–6:20 /km","全程可對話，前半不要搶速度","跑後補水與碳水 / 蛋白質"],"note":"目標是時間累積與耐力，不是速度。"},"rain":{"title":"雨備課表","steps":["室內飛輪 70–80 分鐘 Easy–Steady","每 20 分鐘補水一次","核心 10 分鐘 + 小腿提踵 3 × 15"],"note":"以長時間有氧取代，不做爆發。"},"fatigue":{"title":"疲勞備案","steps":["快走 60 分鐘或 10,000–12,000 步","可用輕負重背心，但保持自然步態","伸展 10 分鐘"],"note":"保留低強度長時間刺激。"}}},
+
+        {"date":"2026-11-03","week":2,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":7,"summary":"7K @ 6:00–6:30 /km","plans":{"main":{"title":"主課表","steps":["7 KM Easy @ 6:00–6:30 /km","最後 5 分鐘保持放鬆，不加速"],"note":"恢復與維持心肺。"},"rain":{"title":"雨備課表","steps":["飛輪 40 分鐘 Easy","上肢訓練 20–30 分鐘","核心 10 分鐘"],"note":"不做腿部高強度。"},"fatigue":{"title":"疲勞備案","steps":["快走 8,000–10,000 步","髖關節活動度 10 分鐘","小腿提踵 2 × 15"],"note":"維持活動即可。"}}},
+        {"date":"2026-11-05","week":2,"type":"Hill","shortLabel":"HILL","title":"坡跑訓練","distanceKm":8,"summary":"2K 熱身 + 6 × 60 秒上坡 + 2K 收操","plans":{"main":{"title":"主課表","steps":["2 KM Easy 熱身","6 × 60 秒上坡，慢跑下坡恢復","2 KM Easy 收操"],"note":"上坡保持姿勢與步頻，不用全力衝。"},"rain":{"title":"雨備課表","steps":["跑步機坡度 4–6%，6 × 60 秒","或飛輪 8 × 45 秒高阻力，組間 75 秒輕鬆","臀腿肌耐力 15 分鐘"],"note":"雨天優先室內安全。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 30–35 分鐘 Easy","樓梯 / 輕坡快走 10–15 分鐘","核心 10 分鐘"],"note":"保留爬升刺激，但明顯降低衝擊。"}}},
+        {"date":"2026-11-08","week":2,"type":"LSD","shortLabel":"LSD","title":"長距離 LSD","distanceKm":18,"summary":"18K @ 5:50–6:20 /km","plans":{"main":{"title":"主課表","steps":["18 KM LSD @ 5:50–6:20 /km","練習每 40–50 分鐘補水 / 補給","跑後補充蛋白質與碳水"],"note":"比 Week 1 多 2K，仍然以穩定為主。"},"rain":{"title":"雨備課表","steps":["飛輪 80–90 分鐘","中段加入 3 × 8 分鐘 Steady","核心 10 分鐘 + 小腿肌耐力"],"note":"長時間有氧優先。"},"fatigue":{"title":"疲勞備案","steps":["快走 70 分鐘或 12,000 步","可分上午 / 晚上兩段完成","伸展與滾筒 10 分鐘"],"note":"累可以降級，但保留長時間活動。"}}},
+
+        {"date":"2026-11-10","week":3,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":8,"summary":"8K @ 6:00–6:30 /km","plans":{"main":{"title":"主課表","steps":["8 KM Easy @ 6:00–6:30 /km","最後 1 KM 維持放鬆步頻"],"note":"保持穩定跑感。"},"rain":{"title":"雨備課表","steps":["飛輪 45 分鐘 Easy","上肢訓練 20 分鐘","核心 10 分鐘"],"note":"避免額外腿部高強度。"},"fatigue":{"title":"疲勞備案","steps":["快走 9,000–10,000 步","髖與踝活動度 10 分鐘"],"note":"把恢復當作訓練的一部分。"}}},
+        {"date":"2026-11-12","week":3,"type":"Interval","shortLabel":"INTVL","title":"間歇節奏跑","distanceKm":10,"summary":"2K Easy + 3 × 2K @ 5:05–5:20 + 2K 收操","plans":{"main":{"title":"主課表","steps":["2 KM Easy 熱身","3 × 2 KM @ 5:05–5:20 /km","組間慢跑 2–3 分鐘","2 KM Easy 收操"],"note":"重點是可控制的強度，不追單組最快。"},"rain":{"title":"雨備課表","steps":["飛輪 10 分鐘熱身","3 × 8 分鐘中高強度，組間 3 分鐘輕鬆","核心 12 分鐘"],"note":"以穩定功率取代路跑間歇。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 Easy 35 分鐘","快走至少 8,000 步","小腿 + 臀中肌 2 組"],"note":"不要硬做速度課。"}}},
+        {"date":"2026-11-15","week":3,"type":"LSD","shortLabel":"LSD","title":"長距離 LSD","distanceKm":20,"summary":"20K @ 5:50–6:20 /km","plans":{"main":{"title":"主課表","steps":["20 KM LSD @ 5:50–6:20 /km","練習補給，約每 40–50 分鐘一次","注意後段步頻與姿勢"],"note":"Phase 1 最長距離。"},"rain":{"title":"雨備課表","steps":["飛輪 90 分鐘 Easy–Steady","中段加入 4 × 5 分鐘 Steady","核心 10 分鐘 + 小腿肌耐力"],"note":"安全優先。"},"fatigue":{"title":"疲勞備案","steps":["快走 75–90 分鐘或 12,000–14,000 步","輕負重背心可選，但負重以不改變步態為原則","伸展 10 分鐘"],"note":"保留長時間活動刺激。"}}},
+
+        {"date":"2026-11-17","week":4,"type":"Easy Run","shortLabel":"EASY","title":"降載輕鬆跑","distanceKm":6,"summary":"6K @ 6:10–6:40 /km","plans":{"main":{"title":"主課表","steps":["6 KM Easy @ 6:10–6:40 /km","跑後完整伸展 10 分鐘"],"note":"降載週，刻意把速度放慢。"},"rain":{"title":"雨備課表","steps":["飛輪 30–35 分鐘 Easy","上肢或核心 15–20 分鐘"],"note":"保持輕鬆。"},"fatigue":{"title":"疲勞備案","steps":["快走 7,000–9,000 步","Mobility 10 分鐘"],"note":"這週本來就要吸收訓練。"}}},
+        {"date":"2026-11-19","week":4,"type":"Strides","shortLabel":"STRIDE","title":"輕鬆跑＋加速跑","distanceKm":6,"summary":"6K Easy @ 6:10–6:40 + 4 × 100m strides","plans":{"main":{"title":"主課表","steps":["6 KM Easy @ 6:10–6:40 /km","4 × 100 m strides，放鬆加速","組間走 / 慢跑完整恢復"],"note":"strides 是步頻與跑姿練習，不是衝刺。"},"rain":{"title":"雨備課表","steps":["跑步機 Easy 30–35 分鐘","最後 4 × 20 秒加速","核心 10 分鐘"],"note":"室內同樣可完成。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 Easy 25–30 分鐘","快走 7,000–8,000 步"],"note":"今天不需要做速度刺激。"}}},
+        {"date":"2026-11-22","week":4,"type":"LSD","shortLabel":"LSD","title":"降載長距離","distanceKm":16,"summary":"16K @ 5:55–6:25 /km","plans":{"main":{"title":"主課表","steps":["16 KM LSD @ 5:55–6:25 /km","整體保持輕鬆","跑後補水、進食、伸展"],"note":"完成 Phase 1 後準備進入耐力強化期。"},"rain":{"title":"雨備課表","steps":["飛輪 65–75 分鐘 Easy","核心 10 分鐘","小腿與臀腿輕量肌耐力"],"note":"降載週不追總量。"},"fatigue":{"title":"疲勞備案","steps":["快走 60 分鐘或 10,000 步","伸展 10 分鐘"],"note":"完成度比硬撐更重要。"}}}
+      ]
+    },
+
+    {
+      "id": "phase2",
+      "label": "PHASE 2",
+      "name": "耐力強化期",
+      "color": "#49c8ff",
+      "startDate": "2026-11-23",
+      "endDate": "2027-01-03",
+      "weeks": 6,
+      "weeklyRuns": 3,
+      "workouts": [
+        {"date":"2026-11-24","week":5,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":7,"summary":"7K @ 6:00–6:30 /km","plans":{"main":{"title":"主課表","steps":["7 KM Easy @ 6:00–6:30 /km"],"note":"維持有氧與恢復。"},"rain":{"title":"雨備課表","steps":["飛輪 40 分鐘 Easy","核心 10 分鐘"],"note":"室內取代。"},"fatigue":{"title":"疲勞備案","steps":["快走 8,000–10,000 步","Mobility 10 分鐘"],"note":"保持活動。"}}},
+        {"date":"2026-11-26","week":5,"type":"Tempo","shortLabel":"TEMPO","title":"節奏跑","distanceKm":8,"summary":"2K Easy + 4K @ 5:20–5:35 + 2K Easy","plans":{"main":{"title":"主課表","steps":["2 KM Easy","4 KM @ 5:20–5:35 /km","2 KM Easy"],"note":"穩定節奏。"},"rain":{"title":"雨備課表","steps":["飛輪 10 分鐘熱身","2 × 10 分鐘 Steady，組間 4 分鐘 Easy","核心 10 分鐘"],"note":"模擬節奏輸出。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 Easy 30–35 分鐘","快走 8,000 步"],"note":"不做速度。"}}},
+        {"date":"2026-11-29","week":5,"type":"LSD","shortLabel":"LSD","title":"長距離 LSD","distanceKm":20,"summary":"20K @ 5:50–6:20 /km","plans":{"main":{"title":"主課表","steps":["20 KM LSD @ 5:50–6:20 /km","每 40–50 分鐘練習補給"],"note":"建立耐力。"},"rain":{"title":"雨備課表","steps":["飛輪 90 分鐘 Easy–Steady","核心 10 分鐘"],"note":"長時間有氧。"},"fatigue":{"title":"疲勞備案","steps":["快走 75–90 分鐘或 12,000 步"],"note":"維持低強度長時間刺激。"}}},
+
+        {"date":"2026-12-01","week":6,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":8,"summary":"8K @ 6:00–6:30 /km","plans":{"main":{"title":"主課表","steps":["8 KM Easy @ 6:00–6:30 /km"],"note":"舒服完成。"},"rain":{"title":"雨備課表","steps":["飛輪 45 分鐘 Easy","上肢 20 分鐘"],"note":"避免額外腿部壓力。"},"fatigue":{"title":"疲勞備案","steps":["快走 9,000–10,000 步"],"note":"維持活動。"}}},
+        {"date":"2026-12-03","week":6,"type":"Interval","shortLabel":"INTVL","title":"節奏間歇","distanceKm":10,"summary":"2K 熱身 + 2K × 3 @ 5:10–5:25 + 2K 收操","plans":{"main":{"title":"主課表","steps":["2 KM 熱身","3 × 2 KM @ 5:10–5:25 /km","組間慢跑 2–3 分鐘","2 KM 收操"],"note":"穩定完成三組。"},"rain":{"title":"雨備課表","steps":["飛輪 3 × 8 分鐘中高強度","組間 3 分鐘 Easy","核心 10 分鐘"],"note":"控制呼吸與輸出。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 35 分鐘 Easy","快走至少 8,000 步"],"note":"疲勞時不硬做間歇。"}}},
+        {"date":"2026-12-06","week":6,"type":"LSD","shortLabel":"LSD","title":"長距離 LSD","distanceKm":22,"summary":"22K @ 5:50–6:20 /km","plans":{"main":{"title":"主課表","steps":["22 KM LSD @ 5:50–6:20 /km","完整補給演練至少 1 次"],"note":"延長在腳上的時間。"},"rain":{"title":"雨備課表","steps":["飛輪 95–105 分鐘","每 30 分鐘短暫補水","核心 10 分鐘"],"note":"長時間有氧。"},"fatigue":{"title":"疲勞備案","steps":["快走 80–90 分鐘","或 12,000–14,000 步"],"note":"維持時間刺激。"}}},
+
+        {"date":"2026-12-08","week":7,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":8,"summary":"8K @ 6:00–6:30 /km","plans":{"main":{"title":"主課表","steps":["8 KM Easy @ 6:00–6:30 /km"],"note":"保持跑感。"},"rain":{"title":"雨備課表","steps":["飛輪 45 分鐘 Easy","核心 10 分鐘"],"note":"安全優先。"},"fatigue":{"title":"疲勞備案","steps":["快走 9,000–10,000 步"],"note":"保持活動。"}}},
+        {"date":"2026-12-10","week":7,"type":"Tempo","shortLabel":"TEMPO","title":"節奏跑","distanceKm":10,"summary":"2K Easy + 6K @ 5:20–5:35 + 2K Easy","plans":{"main":{"title":"主課表","steps":["2 KM Easy","6 KM @ 5:20–5:35 /km","2 KM Easy"],"note":"可持續、穩定輸出。"},"rain":{"title":"雨備課表","steps":["飛輪 10 分鐘熱身","20–25 分鐘 Steady","10 分鐘 Easy","核心 10 分鐘"],"note":"保持穩定心率。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 Easy 35 分鐘","快走 8,000 步"],"note":"降級但不歸零。"}}},
+        {"date":"2026-12-13","week":7,"type":"LSD","shortLabel":"LSD","title":"長距離 LSD","distanceKm":24,"summary":"24K @ 5:50–6:20 /km","plans":{"main":{"title":"主課表","steps":["24 KM LSD @ 5:50–6:20 /km","補給練習 40–45 分鐘一次"],"note":"開始熟悉更長時間的補給節奏。"},"rain":{"title":"雨備課表","steps":["飛輪 105–115 分鐘 Easy–Steady","核心 10 分鐘"],"note":"室內耐力替代。"},"fatigue":{"title":"疲勞備案","steps":["快走 90 分鐘或 14,000 步"],"note":"保持時間刺激即可。"}}},
+
+        {"date":"2026-12-15","week":8,"type":"Easy Run","shortLabel":"EASY","title":"降載輕鬆跑","distanceKm":6,"summary":"6K @ 6:05–6:35 /km","plans":{"main":{"title":"主課表","steps":["6 KM Easy @ 6:05–6:35 /km"],"note":"降載週。"},"rain":{"title":"雨備課表","steps":["飛輪 30–35 分鐘 Easy","核心 10 分鐘"],"note":"維持輕鬆。"},"fatigue":{"title":"疲勞備案","steps":["快走 7,000–9,000 步"],"note":"吸收前面訓練。"}}},
+        {"date":"2026-12-17","week":8,"type":"Fartlek","shortLabel":"FARTLEK","title":"變速跑","distanceKm":8,"summary":"2K 熱身 + 6 × 3 分鐘 @ 5:05–5:20 + 2K 收操","plans":{"main":{"title":"主課表","steps":["2 KM 熱身","6 × 3 分鐘 @ 5:05–5:20 /km","慢跑恢復","2 KM 收操"],"note":"速度段不要失控。"},"rain":{"title":"雨備課表","steps":["飛輪 6 × 3 分鐘高阻力","組間 2 分鐘 Easy","核心 10 分鐘"],"note":"保留變速刺激。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 Easy 30 分鐘","快走 8,000 步"],"note":"降級完成。"}}},
+        {"date":"2026-12-20","week":8,"type":"LSD","shortLabel":"LSD","title":"降載長距離","distanceKm":20,"summary":"20K @ 5:55–6:25 /km","plans":{"main":{"title":"主課表","steps":["20 KM LSD @ 5:55–6:25 /km"],"note":"不追速度。"},"rain":{"title":"雨備課表","steps":["飛輪 85–95 分鐘 Easy","核心 10 分鐘"],"note":"保持耐力。"},"fatigue":{"title":"疲勞備案","steps":["快走 75 分鐘或 12,000 步"],"note":"降載完成。"}}},
+
+        {"date":"2026-12-22","week":9,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":8,"summary":"8K @ 6:00–6:30 /km","plans":{"main":{"title":"主課表","steps":["8 KM Easy @ 6:00–6:30 /km"],"note":"保持舒適。"},"rain":{"title":"雨備課表","steps":["飛輪 45 分鐘 Easy","上肢 20 分鐘"],"note":"室內替代。"},"fatigue":{"title":"疲勞備案","steps":["快走 9,000–10,000 步"],"note":"不歸零。"}}},
+        {"date":"2026-12-24","week":9,"type":"MP","shortLabel":"MP","title":"馬拉松配速入門","distanceKm":10,"summary":"2K Easy + 6K @ 6:15–6:25 + 2K Easy","plans":{"main":{"title":"主課表","steps":["2 KM Easy","6 KM @ 6:15–6:25 /km","2 KM Easy"],"note":"感受目標馬拉松配速。"},"rain":{"title":"雨備課表","steps":["跑步機 2K Easy","6K @ 6:15–6:25 /km","2K Easy"],"note":"若無跑步機，可用飛輪 50 分鐘 Steady。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 Easy 35–40 分鐘","快走 8,000 步"],"note":"不勉強做 MP。"}}},
+        {"date":"2026-12-27","week":9,"type":"LSD","shortLabel":"LSD","title":"長距離 LSD","distanceKm":26,"summary":"26K @ 5:50–6:25 /km","plans":{"main":{"title":"主課表","steps":["26 KM LSD @ 5:50–6:25 /km","完整補給演練"],"note":"本階段長跑高點。"},"rain":{"title":"雨備課表","steps":["飛輪 115–125 分鐘 Easy–Steady","每 30–40 分鐘補水 / 碳水"],"note":"模擬長時間運動。"},"fatigue":{"title":"疲勞備案","steps":["快走 90 分鐘以上或 14,000–16,000 步"],"note":"只在一般疲勞時採用；有疼痛就休息。"}}}
+      ]
+    },
+
+    {
+      "id": "phase3",
+      "label": "PHASE 3",
+      "name": "馬拉松專項期",
+      "color": "#ff9f2d",
+      "startDate": "2027-01-04",
+      "endDate": "2027-02-14",
+      "weeks": 6,
+      "weeklyRuns": 3,
+      "workouts": [
+        {"date":"2027-01-05","week":11,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":8,"summary":"8K @ 6:00–6:30 /km","plans":{"main":{"title":"主課表","steps":["8 KM Easy @ 6:00–6:30 /km"],"note":"旅行後重新進入節奏。"},"rain":{"title":"雨備課表","steps":["飛輪 45 分鐘 Easy","核心 10 分鐘"],"note":"室內取代。"},"fatigue":{"title":"疲勞備案","steps":["快走 9,000–10,000 步"],"note":"恢復優先。"}}},
+        {"date":"2027-01-07","week":11,"type":"MP","shortLabel":"MP","title":"馬拉松配速入門","distanceKm":10,"summary":"2K Easy + 6K @ 6:15–6:25 + 2K Easy","plans":{"main":{"title":"主課表","steps":["2 KM Easy","6 KM @ 6:15–6:25 /km","2 KM Easy"],"note":"穩定輸出。"},"rain":{"title":"雨備課表","steps":["跑步機照原課表","或飛輪 50 分鐘 Steady"],"note":"安全優先。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 35 分鐘 Easy","快走 8,000 步"],"note":"不要硬做配速。"}}},
+        {"date":"2027-01-10","week":11,"type":"LSD","shortLabel":"LSD","title":"長距離 LSD","distanceKm":26,"summary":"26K @ 5:50–6:25 /km","plans":{"main":{"title":"主課表","steps":["26 KM LSD @ 5:50–6:25 /km","完整補給演練"],"note":"模擬比賽耐力。"},"rain":{"title":"雨備課表","steps":["飛輪 120 分鐘 Easy–Steady","補給照比賽計畫"],"note":"維持長時間刺激。"},"fatigue":{"title":"疲勞備案","steps":["快走 90 分鐘或 15,000 步"],"note":"若有傷痛不要使用負重。"}}},
+
+        {"date":"2027-01-12","week":12,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":8,"summary":"8K @ 6:00–6:30 /km","plans":{"main":{"title":"主課表","steps":["8 KM Easy @ 6:00–6:30 /km"],"note":"恢復。"},"rain":{"title":"雨備課表","steps":["飛輪 45 分鐘 Easy","上肢 20 分鐘"],"note":"腿部不加碼。"},"fatigue":{"title":"疲勞備案","steps":["快走 9,000 步"],"note":"保持活動。"}}},
+        {"date":"2027-01-14","week":12,"type":"Interval","shortLabel":"INTVL","title":"節奏／間歇課","distanceKm":12,"summary":"2K 熱身 + 3 × 2K @ 5:10–5:25 + 2K 收操","plans":{"main":{"title":"主課表","steps":["2 KM 熱身","3 × 2 KM @ 5:10–5:25 /km","組間慢跑 2–3 分鐘","2 KM 收操"],"note":"專項期仍需保留速度。"},"rain":{"title":"雨備課表","steps":["飛輪 3 × 8 分鐘中高強度","組間 3 分鐘 Easy","核心 10 分鐘"],"note":"替代速度課。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 Easy 35 分鐘","快走 8,000 步"],"note":"疲勞時不做間歇。"}}},
+        {"date":"2027-01-17","week":12,"type":"LSD","shortLabel":"LSD","title":"長距離 LSD","distanceKm":28,"summary":"28K @ 5:50–6:25 /km，最後 4K 可跑 6:15–6:25","plans":{"main":{"title":"主課表","steps":["24 KM Easy–LSD","最後 4 KM 可提高到 6:15–6:25 /km","補給完整演練"],"note":"若狀態不好，最後 4K 不必加速。"},"rain":{"title":"雨備課表","steps":["飛輪 125–135 分鐘","最後 20 分鐘做 Steady"],"note":"維持後段穩定輸出。"},"fatigue":{"title":"疲勞備案","steps":["快走 100 分鐘或 15,000 步"],"note":"有疼痛直接休息。"}}},
+
+        {"date":"2027-01-19","week":13,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":8,"summary":"8K @ 6:00–6:30 /km","plans":{"main":{"title":"主課表","steps":["8 KM Easy @ 6:00–6:30 /km"],"note":"恢復。"},"rain":{"title":"雨備課表","steps":["飛輪 45 分鐘 Easy"],"note":"簡單完成。"},"fatigue":{"title":"疲勞備案","steps":["快走 9,000–10,000 步"],"note":"維持活動。"}}},
+        {"date":"2027-01-21","week":13,"type":"MP","shortLabel":"MP","title":"馬拉松配速課","distanceKm":12,"summary":"2K Easy + 8K @ 6:15–6:25 + 2K Easy","plans":{"main":{"title":"主課表","steps":["2 KM Easy","8 KM @ 6:15–6:25 /km","2 KM Easy"],"note":"練習長時間穩定輸出。"},"rain":{"title":"雨備課表","steps":["跑步機照原課表","或飛輪 60 分鐘 Steady"],"note":"不追功率數字。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 40 分鐘 Easy","快走 8,000 步"],"note":"降級完成。"}}},
+        {"date":"2027-01-24","week":13,"type":"LSD","shortLabel":"LSD","title":"長距離 LSD","distanceKm":30,"summary":"30K @ 5:55–6:25 /km","plans":{"main":{"title":"主課表","steps":["30 KM LSD @ 5:55–6:25 /km","完整補給、鞋襪、早餐演練"],"note":"重要的比賽模擬課。"},"rain":{"title":"雨備課表","steps":["飛輪 135–145 分鐘 Easy–Steady","補給照比賽頻率"],"note":"若能安全跑步機完成長時數，也可分段。"},"fatigue":{"title":"疲勞備案","steps":["快走 100–110 分鐘","不建議為了里程硬撐"],"note":"30K 課前已有明顯疲勞時，要保守。"}}},
+
+        {"date":"2027-01-26","week":14,"type":"Easy Run","shortLabel":"EASY","title":"降載輕鬆跑","distanceKm":6,"summary":"6K @ 6:05–6:30 /km","plans":{"main":{"title":"主課表","steps":["6 KM Easy @ 6:05–6:30 /km"],"note":"降載吸收。"},"rain":{"title":"雨備課表","steps":["飛輪 30 分鐘 Easy","核心 10 分鐘"],"note":"非常輕鬆。"},"fatigue":{"title":"疲勞備案","steps":["快走 7,000–8,000 步"],"note":"休息也可以。"}}},
+        {"date":"2027-01-28","week":14,"type":"Tempo","shortLabel":"TEMPO","title":"穩定跑／節奏跑","distanceKm":10,"summary":"2K Easy + 6K @ 5:25–5:40 + 2K Easy","plans":{"main":{"title":"主課表","steps":["2 KM Easy","6 KM @ 5:25–5:40 /km","2 KM Easy"],"note":"保持跑感，不跑爆。"},"rain":{"title":"雨備課表","steps":["飛輪 20–25 分鐘 Steady","核心 10 分鐘"],"note":"降載週也不需做太重。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 Easy 30 分鐘","快走 8,000 步"],"note":"降級。"}}},
+        {"date":"2027-01-31","week":14,"type":"LSD","shortLabel":"LSD","title":"降載長距離","distanceKm":22,"summary":"22K @ 5:55–6:25 /km","plans":{"main":{"title":"主課表","steps":["22 KM LSD @ 5:55–6:25 /km"],"note":"保留耐力、降低疲勞。"},"rain":{"title":"雨備課表","steps":["飛輪 95–105 分鐘 Easy"],"note":"降載。"},"fatigue":{"title":"疲勞備案","steps":["快走 75–90 分鐘"],"note":"不用硬追總量。"}}},
+
+        {"date":"2027-02-02","week":15,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":8,"summary":"8K @ 6:00–6:30 /km","plans":{"main":{"title":"主課表","steps":["8 KM Easy @ 6:00–6:30 /km"],"note":"恢復。"},"rain":{"title":"雨備課表","steps":["飛輪 45 分鐘 Easy"],"note":"室內替代。"},"fatigue":{"title":"疲勞備案","steps":["快走 9,000–10,000 步"],"note":"維持活動。"}}},
+        {"date":"2027-02-04","week":15,"type":"MP","shortLabel":"MP","title":"關鍵馬配課","distanceKm":12,"summary":"2K Easy + 8K @ 6:15–6:25 + 2K Easy","plans":{"main":{"title":"主課表","steps":["2 KM Easy","8 KM @ 6:15–6:25 /km","2 KM Easy"],"note":"比賽配速感要自然。"},"rain":{"title":"雨備課表","steps":["跑步機照原課表","或飛輪 60 分鐘 Steady"],"note":"以可控輸出為主。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 40 分鐘 Easy","快走 8,000 步"],"note":"不硬做關鍵課。"}}},
+        {"date":"2027-02-07","week":15,"type":"LSD","shortLabel":"LSD","title":"最長距離週","distanceKm":32,"summary":"32K @ 5:55–6:25 /km，最後 6K 可至 6:15–6:25","plans":{"main":{"title":"主課表","steps":["26 KM LSD","最後 6 KM 視狀態提高到 6:15–6:25 /km","完整模擬補給、早餐、鞋襪"],"note":"全計畫最長課；若身體不佳，取消最後加速。"},"rain":{"title":"雨備課表","steps":["飛輪 145–155 分鐘 Easy–Steady","最後 25 分鐘 Steady","完整補給練習"],"note":"室內替代也以長時數為核心。"},"fatigue":{"title":"疲勞備案","steps":["快走 110–120 分鐘","必要時直接改恢復，不為了完成 32K 冒受傷風險"],"note":"這堂的重要性高，但健康優先。"}}},
+
+        {"date":"2027-02-09","week":16,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":8,"summary":"8K @ 6:00–6:30 /km","plans":{"main":{"title":"主課表","steps":["8 KM Easy @ 6:00–6:30 /km"],"note":"開始準備 Taper。"},"rain":{"title":"雨備課表","steps":["飛輪 40–45 分鐘 Easy"],"note":"輕鬆完成。"},"fatigue":{"title":"疲勞備案","steps":["快走 8,000–9,000 步"],"note":"保持新鮮。"}}},
+        {"date":"2027-02-11","week":16,"type":"Tempo","shortLabel":"TEMPO","title":"穩定節奏跑","distanceKm":10,"summary":"2K Easy + 5K @ 5:25–5:40 + 3K Easy","plans":{"main":{"title":"主課表","steps":["2 KM Easy","5 KM @ 5:25–5:40 /km","3 KM Easy"],"note":"保留速度感，不累積過多疲勞。"},"rain":{"title":"雨備課表","steps":["飛輪 20 分鐘 Steady","15 分鐘 Easy","核心 10 分鐘"],"note":"保持刺激即可。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 30 分鐘 Easy","快走 8,000 步"],"note":"不硬做速度。"}}},
+        {"date":"2027-02-14","week":16,"type":"LSD","shortLabel":"LSD","title":"專項期收尾長跑","distanceKm":28,"summary":"28K @ 5:55–6:25 /km","plans":{"main":{"title":"主課表","steps":["28 KM LSD @ 5:55–6:25 /km","最後一次完整補給與裝備演練"],"note":"完成後正式進入 Taper。"},"rain":{"title":"雨備課表","steps":["飛輪 120–130 分鐘 Easy–Steady","補給照比賽計畫"],"note":"安全為主。"},"fatigue":{"title":"疲勞備案","steps":["快走 90–100 分鐘","若有明顯腿部異常直接休息"],"note":"進 Taper 前不要冒險。"}}}
+      ]
+    },
+
+    {
+      "id": "phase4",
+      "label": "PHASE 4",
+      "name": "Taper 調整期",
+      "color": "#48e6cf",
+      "startDate": "2027-02-15",
+      "endDate": "2027-03-06",
+      "weeks": 3,
+      "weeklyRuns": 3,
+      "workouts": [
+        {"date":"2027-02-16","week":17,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":8,"summary":"8K @ 6:00–6:30 /km","plans":{"main":{"title":"主課表","steps":["8 KM Easy @ 6:00–6:30 /km"],"note":"開始降低總量。"},"rain":{"title":"雨備課表","steps":["飛輪 40 分鐘 Easy","核心 8–10 分鐘"],"note":"保持輕鬆。"},"fatigue":{"title":"疲勞備案","steps":["快走 8,000–9,000 步"],"note":"新鮮度優先。"}}},
+        {"date":"2027-02-18","week":17,"type":"MP","shortLabel":"MP","title":"馬拉松配速跑","distanceKm":10,"summary":"2K Easy + 6K @ 6:15–6:25 + 2K Easy","plans":{"main":{"title":"主課表","steps":["2 KM Easy","6 KM @ 6:15–6:25 /km","2 KM Easy"],"note":"保持比賽配速感。"},"rain":{"title":"雨備課表","steps":["跑步機照原課表","或飛輪 45–50 分鐘 Steady"],"note":"不要額外加量。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 30–35 分鐘 Easy","快走 7,000–8,000 步"],"note":"降級完成。"}}},
+        {"date":"2027-02-21","week":17,"type":"LSD","shortLabel":"LSD","title":"長距離 LSD","distanceKm":24,"summary":"24K @ 5:55–6:25 /km","plans":{"main":{"title":"主課表","steps":["24 KM LSD @ 5:55–6:25 /km","跑完仍保留餘裕"],"note":"Taper 中最長的一堂。"},"rain":{"title":"雨備課表","steps":["飛輪 100–110 分鐘 Easy","補給照平常練習"],"note":"降低疲勞。"},"fatigue":{"title":"疲勞備案","steps":["快走 80–90 分鐘"],"note":"不硬撐。"}}},
+
+        {"date":"2027-02-23","week":18,"type":"Easy Run","shortLabel":"EASY","title":"輕鬆跑","distanceKm":6,"summary":"6K @ 6:05–6:35 /km","plans":{"main":{"title":"主課表","steps":["6 KM Easy @ 6:05–6:35 /km"],"note":"保持腿感。"},"rain":{"title":"雨備課表","steps":["飛輪 30 分鐘 Easy","Mobility 8 分鐘"],"note":"很輕鬆。"},"fatigue":{"title":"疲勞備案","steps":["快走 6,000–8,000 步"],"note":"新鮮度優先。"}}},
+        {"date":"2027-02-25","week":18,"type":"MP","shortLabel":"MP","title":"馬拉松配速喚醒","distanceKm":8,"summary":"2K Easy + 4K @ 6:15–6:25 + 2K Easy","plans":{"main":{"title":"主課表","steps":["2 KM Easy","4 KM @ 6:15–6:25 /km","2 KM Easy"],"note":"只是喚醒跑感。"},"rain":{"title":"雨備課表","steps":["跑步機照原課表","或飛輪 35–40 分鐘 Steady"],"note":"不要追加。"},"fatigue":{"title":"疲勞備案","steps":["飛輪 25–30 分鐘 Easy","快走 6,000–7,000 步"],"note":"保持輕鬆。"}}},
+        {"date":"2027-02-28","week":18,"type":"LSD","shortLabel":"LSD","title":"Taper 長跑","distanceKm":16,"summary":"16K @ 5:55–6:25 /km","plans":{"main":{"title":"主課表","steps":["16 KM LSD @ 5:55–6:25 /km","全程刻意保留餘裕"],"note":"離比賽剩一週。"},"rain":{"title":"雨備課表","steps":["飛輪 65–75 分鐘 Easy"],"note":"降低衝擊。"},"fatigue":{"title":"疲勞備案","steps":["快走 60 分鐘"],"note":"不求量。"}}},
+
+        {"date":"2027-03-02","week":19,"type":"Strides","shortLabel":"STRIDE","title":"輕鬆跑＋加速跑","distanceKm":5,"summary":"5K Easy + 4 × 100m strides","plans":{"main":{"title":"主課表","steps":["5 KM Easy","4 × 100 m strides","組間完整恢復"],"note":"保持腿部彈性，不做疲勞。"},"rain":{"title":"雨備課表","steps":["跑步機 Easy 25–30 分鐘","4 × 20 秒輕快加速"],"note":"室內完成即可。"},"fatigue":{"title":"疲勞備案","steps":["快走 30–40 分鐘","Mobility 8 分鐘"],"note":"不要硬撐。"}}},
+        {"date":"2027-03-03","week":19,"type":"Easy / Rest","shortLabel":"EASY","title":"3K Easy 或休息","distanceKm":3,"summary":"依身體狀況調整","plans":{"main":{"title":"主課表","steps":["若精神與腿感都好：3 KM 非常輕鬆跑","若已有疲勞：直接休息"],"note":"今天的任務是保持新鮮。"},"rain":{"title":"雨備課表","steps":["室內走路 20–30 分鐘","簡單伸展，不做肌力"],"note":"不需要補課。"},"fatigue":{"title":"疲勞備案","steps":["休息","日常步行即可","提早睡眠"],"note":"比賽週疲勞不需要硬補訓練。"}}}
+      ]
+    }
+  ]
+}

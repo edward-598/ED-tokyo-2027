@@ -1,0 +1,9 @@
+{
+  "name": "Tokyo 2027 Training",
+  "short_name": "Tokyo 2027",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07090d",
+  "theme_color": "#07090d",
+  "description": "個人東京馬拉松訓練日曆與每日課表"
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0d12" />
+  <meta name="description" content="Tokyo 2027 個人馬拉松訓練追蹤工具" />
+  <title>Tokyo 2027 Training</title>
+
+  <!--
+    V1.0：只做最核心的三件事
+    1) Today：今天該做什麼
+    2) Training Calendar：整體課表與完成狀態
+    3) Daily Workout：單日主課表 / 雨備 / 疲勞備案
+
+    Race 與 Course 先保留入口，之後再加。
+  -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MARATHON TRAINING</p>
+        <h1>TOKYO 2027</h1>
+      </div>
+      <button id="resetBtn" class="ghost-button" type="button" title="清除本機完成紀錄">Reset</button>
+    </header>
+
+    <main id="app" class="page-content" aria-live="polite">
+      <!-- JavaScript 會把頁面內容放到這裡 -->
+    </main>
+
+    <nav class="bottom-nav" aria-label="主要導覽">
+      <button class="nav-item active" data-view="today" type="button">
+        <span class="nav-icon">●</span>
+        <span>Today</span>
+      </button>
+      <button class="nav-item" data-view="calendar" type="button">
+        <span class="nav-icon">▦</span>
+        <span>Training</span>
+      </button>
+      <button class="nav-item disabled" type="button" disabled>
+        <span class="nav-icon">◇</span>
+        <span>Race</span>
+        <small>Later</small>
+      </button>
+      <button class="nav-item disabled" type="button" disabled>
+        <span class="nav-icon">⌁</span>
+        <span>Course</span>
+        <small>Later</small>
+      </button>
+    </nav>
+  </div>
+
+  <!-- 單日課表彈出視窗 -->
+  <dialog id="workoutDialog" class="workout-dialog">
+    <div id="workoutDialogContent"></div>
+  </dialog>
+
+  <script src="js/storage.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
