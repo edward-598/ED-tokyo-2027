@@ -1,5 +1,5 @@
 {
-  "appVersion": "1.1.0",
+  "appVersion": "1.2.0",
   "raceDate": "2027-03-07",
   "phases": [
     {
@@ -51,6 +51,51 @@
           "category": "run"
         },
         {
+          "date": "2026-10-28",
+          "week": 1,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜基礎穩定",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Split Squat 2–3 × 8 / side（RPE 6）",
+                "Single-leg Romanian Deadlift 2–3 × 8 / side",
+                "Standing Calf Raise 3 × 15–20",
+                "Tibialis Raise 2 × 15–20",
+                "Dead Bug 2 × 10 / side + Side Plank 2 × 30 秒 / side"
+              ],
+              "note": "以單腳穩定、小腿與核心為主；隔天有品質跑，不做到力竭。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Split Squat 2–3 × 8 / side（RPE 6）",
+                "Single-leg Romanian Deadlift 2–3 × 8 / side",
+                "Standing Calf Raise 3 × 15–20",
+                "Tibialis Raise 2 × 15–20",
+                "Dead Bug 2 × 10 / side + Side Plank 2 × 30 秒 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2026-10-29",
           "week": 1,
           "type": "Tempo",
@@ -92,45 +137,57 @@
         {
           "date": "2026-10-30",
           "week": 1,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 A",
-          "duration": "45–50 MIN",
-          "summary": "下肢基礎＋核心 · 45–50 MIN",
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Upper + Core",
+          "duration": "45–60 MIN",
+          "summary": "Upper + Core + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Goblet Squat 或 Leg Press 3 × 8–10（RPE 6–7）",
-                "Bulgarian Split Squat 3 × 8 / side",
-                "Romanian Deadlift 3 × 8",
-                "Standing Calf Raise 3 × 15–20",
-                "Dead Bug 3 × 10 / side + Side Plank 2 × 30–45 秒 / side"
+                "Lat Pulldown 3 × 8–10",
+                "Chest Press / Push-up 3 × 8–12",
+                "Seated Row 3 × 10",
+                "Shoulder Press 2 × 10",
+                "Farmer Carry 3 × 30–40 秒",
+                "Plank 2 × 40 秒"
               ],
-              "note": "建立臀腿、單腳穩定與小腿耐力；保留 2–4 下餘裕，不做到力竭。"
+              "note": "週五以一般健身為主；腿部只做輕量，不影響週日 LSD。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Goblet Squat 或 Leg Press 3 × 8–10（RPE 6–7）",
-                "Bulgarian Split Squat 3 × 8 / side",
-                "Romanian Deadlift 3 × 8",
-                "Standing Calf Raise 3 × 15–20",
-                "Dead Bug 3 × 10 / side + Side Plank 2 × 30–45 秒 / side"
+                "Lat Pulldown 3 × 8–10",
+                "Chest Press / Push-up 3 × 8–12",
+                "Seated Row 3 × 10",
+                "Shoulder Press 2 × 10",
+                "Farmer Carry 3 × 30–40 秒",
+                "Plank 2 × 40 秒"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -212,6 +269,51 @@
           "category": "run"
         },
         {
+          "date": "2026-11-04",
+          "week": 2,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜基礎穩定",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Split Squat 2–3 × 8 / side（RPE 6）",
+                "Single-leg Romanian Deadlift 2–3 × 8 / side",
+                "Standing Calf Raise 3 × 15–20",
+                "Tibialis Raise 2 × 15–20",
+                "Dead Bug 2 × 10 / side + Side Plank 2 × 30 秒 / side"
+              ],
+              "note": "以單腳穩定、小腿與核心為主；隔天有品質跑，不做到力竭。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Split Squat 2–3 × 8 / side（RPE 6）",
+                "Single-leg Romanian Deadlift 2–3 × 8 / side",
+                "Standing Calf Raise 3 × 15–20",
+                "Tibialis Raise 2 × 15–20",
+                "Dead Bug 2 × 10 / side + Side Plank 2 × 30 秒 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2026-11-05",
           "week": 2,
           "type": "Hill",
@@ -253,45 +355,57 @@
         {
           "date": "2026-11-06",
           "week": 2,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 A",
-          "duration": "45–50 MIN",
-          "summary": "下肢基礎＋核心 · 45–50 MIN",
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Full Body Light",
+          "duration": "45–60 MIN",
+          "summary": "Full Body Light + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Goblet Squat 或 Leg Press 3 × 8–10（RPE 6–7）",
-                "Bulgarian Split Squat 3 × 8 / side",
-                "Romanian Deadlift 3 × 8",
-                "Standing Calf Raise 3 × 15–20",
-                "Dead Bug 3 × 10 / side + Side Plank 2 × 30–45 秒 / side"
+                "Leg Press 2 × 10（RPE 5–6，輕量）",
+                "Lat Pulldown 3 × 10",
+                "Chest Press 3 × 10",
+                "Cable Row 3 × 10",
+                "Hamstring Curl 2 × 12（輕量）",
+                "Pallof Press 2 × 10 / side"
               ],
-              "note": "穩定動作品質，不追重量；保留 2–4 下餘裕，不做到力竭。"
+              "note": "週五以一般健身為主；腿部只做輕量，不影響週日 LSD。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Goblet Squat 或 Leg Press 3 × 8–10（RPE 6–7）",
-                "Bulgarian Split Squat 3 × 8 / side",
-                "Romanian Deadlift 3 × 8",
-                "Standing Calf Raise 3 × 15–20",
-                "Dead Bug 3 × 10 / side + Side Plank 2 × 30–45 秒 / side"
+                "Leg Press 2 × 10（RPE 5–6，輕量）",
+                "Lat Pulldown 3 × 10",
+                "Chest Press 3 × 10",
+                "Cable Row 3 × 10",
+                "Hamstring Curl 2 × 12（輕量）",
+                "Pallof Press 2 × 10 / side"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -372,6 +486,51 @@
           "category": "run"
         },
         {
+          "date": "2026-11-11",
+          "week": 3,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜基礎穩定",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Split Squat 2–3 × 8 / side（RPE 6）",
+                "Single-leg Romanian Deadlift 2–3 × 8 / side",
+                "Standing Calf Raise 3 × 15–20",
+                "Tibialis Raise 2 × 15–20",
+                "Dead Bug 2 × 10 / side + Side Plank 2 × 30 秒 / side"
+              ],
+              "note": "以單腳穩定、小腿與核心為主；隔天有品質跑，不做到力竭。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Split Squat 2–3 × 8 / side（RPE 6）",
+                "Single-leg Romanian Deadlift 2–3 × 8 / side",
+                "Standing Calf Raise 3 × 15–20",
+                "Tibialis Raise 2 × 15–20",
+                "Dead Bug 2 × 10 / side + Side Plank 2 × 30 秒 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2026-11-12",
           "week": 3,
           "type": "Interval",
@@ -414,45 +573,57 @@
         {
           "date": "2026-11-13",
           "week": 3,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 B",
-          "duration": "45–55 MIN",
-          "summary": "後鏈＋小腿 · 45–55 MIN",
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Upper + Core",
+          "duration": "45–60 MIN",
+          "summary": "Upper + Core + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Romanian Deadlift 或 Hip Thrust 3 × 8–10（RPE 6–7）",
-                "Step-up 3 × 8 / side",
-                "Single-leg RDL 2–3 × 8 / side",
-                "Seated / Bent-knee Calf Raise 3 × 15–20",
-                "Pallof Press 3 × 10 / side + Bird Dog 2 × 10 / side"
+                "Lat Pulldown 3 × 8–10",
+                "Chest Press / Push-up 3 × 8–12",
+                "Seated Row 3 × 10",
+                "Shoulder Press 2 × 10",
+                "Farmer Carry 3 × 30–40 秒",
+                "Plank 2 × 40 秒"
               ],
-              "note": "強化臀腿後鏈與後程支撐；保留 2–4 下餘裕，不做到力竭。"
+              "note": "週五以一般健身為主；腿部只做輕量，不影響週日 LSD。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Romanian Deadlift 或 Hip Thrust 3 × 8–10（RPE 6–7）",
-                "Step-up 3 × 8 / side",
-                "Single-leg RDL 2–3 × 8 / side",
-                "Seated / Bent-knee Calf Raise 3 × 15–20",
-                "Pallof Press 3 × 10 / side + Bird Dog 2 × 10 / side"
+                "Lat Pulldown 3 × 8–10",
+                "Chest Press / Push-up 3 × 8–12",
+                "Seated Row 3 × 10",
+                "Shoulder Press 2 × 10",
+                "Farmer Carry 3 × 30–40 秒",
+                "Plank 2 × 40 秒"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -532,6 +703,51 @@
           "category": "run"
         },
         {
+          "date": "2026-11-18",
+          "week": 4,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜基礎穩定",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Split Squat 2–3 × 8 / side（RPE 6）",
+                "Single-leg Romanian Deadlift 2–3 × 8 / side",
+                "Standing Calf Raise 3 × 15–20",
+                "Tibialis Raise 2 × 15–20",
+                "Dead Bug 2 × 10 / side + Side Plank 2 × 30 秒 / side"
+              ],
+              "note": "以單腳穩定、小腿與核心為主；隔天有品質跑，不做到力竭。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Split Squat 2–3 × 8 / side（RPE 6）",
+                "Single-leg Romanian Deadlift 2–3 × 8 / side",
+                "Standing Calf Raise 3 × 15–20",
+                "Tibialis Raise 2 × 15–20",
+                "Dead Bug 2 × 10 / side + Side Plank 2 × 30 秒 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2026-11-19",
           "week": 4,
           "type": "Strides",
@@ -572,45 +788,57 @@
         {
           "date": "2026-11-20",
           "week": 4,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 Light",
-          "duration": "30–40 MIN",
-          "summary": "降載肌力＋核心 · 30–40 MIN",
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Full Body Light",
+          "duration": "45–60 MIN",
+          "summary": "Full Body Light + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Bodyweight / Light Goblet Squat 2 × 10",
-                "Glute Bridge 2 × 12",
-                "Reverse Lunge 2 × 8 / side",
-                "Calf Raise 2 × 15",
-                "Dead Bug + Side Plank，各 2 組"
+                "Leg Press 2 × 10（RPE 5–6，輕量）",
+                "Lat Pulldown 3 × 10",
+                "Chest Press 3 × 10",
+                "Cable Row 3 × 10",
+                "Hamstring Curl 2 × 12（輕量）",
+                "Pallof Press 2 × 10 / side"
               ],
-              "note": "降載週，以維持刺激為主；保留 2–4 下餘裕，不做到力竭。"
+              "note": "週五以一般健身為主；腿部只做輕量，不影響週日 LSD。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Bodyweight / Light Goblet Squat 2 × 10",
-                "Glute Bridge 2 × 12",
-                "Reverse Lunge 2 × 8 / side",
-                "Calf Raise 2 × 15",
-                "Dead Bug + Side Plank，各 2 組"
+                "Leg Press 2 × 10（RPE 5–6，輕量）",
+                "Lat Pulldown 3 × 10",
+                "Chest Press 3 × 10",
+                "Cable Row 3 × 10",
+                "Hamstring Curl 2 × 12（輕量）",
+                "Pallof Press 2 × 10 / side"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -701,6 +929,51 @@
           "category": "run"
         },
         {
+          "date": "2026-11-25",
+          "week": 1,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜肌耐力",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Bulgarian Split Squat 3 × 8 / side（RPE 6–7）",
+                "Romanian Deadlift 3 × 8",
+                "Step-up 2 × 10 / side",
+                "Standing Calf Raise 3 × 18–20",
+                "Pallof Press 2 × 10 / side + Dead Bug 2 × 10 / side"
+              ],
+              "note": "增加後鏈與小腿耐力，但保留至少 2–3 下餘裕。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Bulgarian Split Squat 3 × 8 / side（RPE 6–7）",
+                "Romanian Deadlift 3 × 8",
+                "Step-up 2 × 10 / side",
+                "Standing Calf Raise 3 × 18–20",
+                "Pallof Press 2 × 10 / side + Dead Bug 2 × 10 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2026-11-26",
           "week": 5,
           "type": "Tempo",
@@ -740,46 +1013,58 @@
         },
         {
           "date": "2026-11-27",
-          "week": 5,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 B",
-          "duration": "45–55 MIN",
-          "summary": "後鏈＋小腿 · 45–55 MIN",
+          "week": 1,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Upper + Core",
+          "duration": "45–60 MIN",
+          "summary": "Upper + Core + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Romanian Deadlift 或 Hip Thrust 3 × 8–10（RPE 6–7）",
-                "Step-up 3 × 8 / side",
-                "Single-leg RDL 2–3 × 8 / side",
-                "Seated / Bent-knee Calf Raise 3 × 15–20",
-                "Pallof Press 3 × 10 / side + Bird Dog 2 × 10 / side"
+                "Lat Pulldown 3 × 8–10",
+                "Incline Chest Press 3 × 8–10",
+                "Seated Row 3 × 10",
+                "Lateral Raise 2 × 12–15",
+                "Farmer Carry 3 × 40 秒",
+                "Pallof Press 2 × 10 / side"
               ],
-              "note": "耐力期維持臀腿後鏈與小腿肌耐力；保留 2–4 下餘裕，不做到力竭。"
+              "note": "Full Body 週也不做力竭；週日長跑優先度最高。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Romanian Deadlift 或 Hip Thrust 3 × 8–10（RPE 6–7）",
-                "Step-up 3 × 8 / side",
-                "Single-leg RDL 2–3 × 8 / side",
-                "Seated / Bent-knee Calf Raise 3 × 15–20",
-                "Pallof Press 3 × 10 / side + Bird Dog 2 × 10 / side"
+                "Lat Pulldown 3 × 8–10",
+                "Incline Chest Press 3 × 8–10",
+                "Seated Row 3 × 10",
+                "Lateral Raise 2 × 12–15",
+                "Farmer Carry 3 × 40 秒",
+                "Pallof Press 2 × 10 / side"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -853,6 +1138,51 @@
           "category": "run"
         },
         {
+          "date": "2026-12-02",
+          "week": 2,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜肌耐力",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Bulgarian Split Squat 3 × 8 / side（RPE 6–7）",
+                "Romanian Deadlift 3 × 8",
+                "Step-up 2 × 10 / side",
+                "Standing Calf Raise 3 × 18–20",
+                "Pallof Press 2 × 10 / side + Dead Bug 2 × 10 / side"
+              ],
+              "note": "增加後鏈與小腿耐力，但保留至少 2–3 下餘裕。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Bulgarian Split Squat 3 × 8 / side（RPE 6–7）",
+                "Romanian Deadlift 3 × 8",
+                "Step-up 2 × 10 / side",
+                "Standing Calf Raise 3 × 18–20",
+                "Pallof Press 2 × 10 / side + Dead Bug 2 × 10 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2026-12-03",
           "week": 6,
           "type": "Interval",
@@ -893,46 +1223,58 @@
         },
         {
           "date": "2026-12-04",
-          "week": 6,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 A",
-          "duration": "45–50 MIN",
-          "summary": "下肢基礎＋核心 · 45–50 MIN",
+          "week": 2,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Full Body Moderate",
+          "duration": "45–60 MIN",
+          "summary": "Full Body Moderate + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Goblet Squat 或 Leg Press 3 × 8–10（RPE 6–7）",
-                "Bulgarian Split Squat 3 × 8 / side",
-                "Romanian Deadlift 3 × 8",
-                "Standing Calf Raise 3 × 15–20",
-                "Dead Bug 3 × 10 / side + Side Plank 2 × 30–45 秒 / side"
+                "Leg Press 2 × 8–10（RPE 6）",
+                "Romanian Deadlift 2 × 8（輕中量）",
+                "Chest Press 3 × 10",
+                "Seated Row 3 × 10",
+                "Calf Raise 2 × 15",
+                "Plank 2 × 45 秒"
               ],
-              "note": "穩定力量輸出，不做到力竭；保留 2–4 下餘裕，不做到力竭。"
+              "note": "Full Body 週也不做力竭；週日長跑優先度最高。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Goblet Squat 或 Leg Press 3 × 8–10（RPE 6–7）",
-                "Bulgarian Split Squat 3 × 8 / side",
-                "Romanian Deadlift 3 × 8",
-                "Standing Calf Raise 3 × 15–20",
-                "Dead Bug 3 × 10 / side + Side Plank 2 × 30–45 秒 / side"
+                "Leg Press 2 × 8–10（RPE 6）",
+                "Romanian Deadlift 2 × 8（輕中量）",
+                "Chest Press 3 × 10",
+                "Seated Row 3 × 10",
+                "Calf Raise 2 × 15",
+                "Plank 2 × 45 秒"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -1008,6 +1350,51 @@
           "category": "run"
         },
         {
+          "date": "2026-12-09",
+          "week": 3,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜肌耐力",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Bulgarian Split Squat 3 × 8 / side（RPE 6–7）",
+                "Romanian Deadlift 3 × 8",
+                "Step-up 2 × 10 / side",
+                "Standing Calf Raise 3 × 18–20",
+                "Pallof Press 2 × 10 / side + Dead Bug 2 × 10 / side"
+              ],
+              "note": "增加後鏈與小腿耐力，但保留至少 2–3 下餘裕。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Bulgarian Split Squat 3 × 8 / side（RPE 6–7）",
+                "Romanian Deadlift 3 × 8",
+                "Step-up 2 × 10 / side",
+                "Standing Calf Raise 3 × 18–20",
+                "Pallof Press 2 × 10 / side + Dead Bug 2 × 10 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2026-12-10",
           "week": 7,
           "type": "Tempo",
@@ -1048,46 +1435,58 @@
         },
         {
           "date": "2026-12-11",
-          "week": 7,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 B",
-          "duration": "45–55 MIN",
-          "summary": "後鏈＋單腳穩定 · 45–55 MIN",
+          "week": 3,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Upper + Core",
+          "duration": "45–60 MIN",
+          "summary": "Upper + Core + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Romanian Deadlift 或 Hip Thrust 3 × 8–10（RPE 6–7）",
-                "Step-up 3 × 8 / side",
-                "Single-leg RDL 2–3 × 8 / side",
-                "Seated / Bent-knee Calf Raise 3 × 15–20",
-                "Pallof Press 3 × 10 / side + Bird Dog 2 × 10 / side"
+                "Lat Pulldown 3 × 8–10",
+                "Incline Chest Press 3 × 8–10",
+                "Seated Row 3 × 10",
+                "Lateral Raise 2 × 12–15",
+                "Farmer Carry 3 × 40 秒",
+                "Pallof Press 2 × 10 / side"
               ],
-              "note": "強化單腳支撐與跑姿穩定；保留 2–4 下餘裕，不做到力竭。"
+              "note": "Full Body 週也不做力竭；週日長跑優先度最高。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Romanian Deadlift 或 Hip Thrust 3 × 8–10（RPE 6–7）",
-                "Step-up 3 × 8 / side",
-                "Single-leg RDL 2–3 × 8 / side",
-                "Seated / Bent-knee Calf Raise 3 × 15–20",
-                "Pallof Press 3 × 10 / side + Bird Dog 2 × 10 / side"
+                "Lat Pulldown 3 × 8–10",
+                "Incline Chest Press 3 × 8–10",
+                "Seated Row 3 × 10",
+                "Lateral Raise 2 × 12–15",
+                "Farmer Carry 3 × 40 秒",
+                "Pallof Press 2 × 10 / side"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -1161,6 +1560,51 @@
           "category": "run"
         },
         {
+          "date": "2026-12-16",
+          "week": 4,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜肌耐力",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Bulgarian Split Squat 3 × 8 / side（RPE 6–7）",
+                "Romanian Deadlift 3 × 8",
+                "Step-up 2 × 10 / side",
+                "Standing Calf Raise 3 × 18–20",
+                "Pallof Press 2 × 10 / side + Dead Bug 2 × 10 / side"
+              ],
+              "note": "增加後鏈與小腿耐力，但保留至少 2–3 下餘裕。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Bulgarian Split Squat 3 × 8 / side（RPE 6–7）",
+                "Romanian Deadlift 3 × 8",
+                "Step-up 2 × 10 / side",
+                "Standing Calf Raise 3 × 18–20",
+                "Pallof Press 2 × 10 / side + Dead Bug 2 × 10 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2026-12-17",
           "week": 8,
           "type": "Fartlek",
@@ -1201,46 +1645,58 @@
         },
         {
           "date": "2026-12-18",
-          "week": 8,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 A",
-          "duration": "40–50 MIN",
-          "summary": "下肢基礎＋核心 · 40–50 MIN",
+          "week": 4,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Full Body Moderate",
+          "duration": "45–60 MIN",
+          "summary": "Full Body Moderate + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Goblet Squat 或 Leg Press 3 × 8–10（RPE 6–7）",
-                "Bulgarian Split Squat 3 × 8 / side",
-                "Romanian Deadlift 3 × 8",
-                "Standing Calf Raise 3 × 15–20",
-                "Dead Bug 3 × 10 / side + Side Plank 2 × 30–45 秒 / side"
+                "Leg Press 2 × 8–10（RPE 6）",
+                "Romanian Deadlift 2 × 8（輕中量）",
+                "Chest Press 3 × 10",
+                "Seated Row 3 × 10",
+                "Calf Raise 2 × 15",
+                "Plank 2 × 45 秒"
               ],
-              "note": "維持動作品質與控制；保留 2–4 下餘裕，不做到力竭。"
+              "note": "Full Body 週也不做力竭；週日長跑優先度最高。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Goblet Squat 或 Leg Press 3 × 8–10（RPE 6–7）",
-                "Bulgarian Split Squat 3 × 8 / side",
-                "Romanian Deadlift 3 × 8",
-                "Standing Calf Raise 3 × 15–20",
-                "Dead Bug 3 × 10 / side + Side Plank 2 × 30–45 秒 / side"
+                "Leg Press 2 × 8–10（RPE 6）",
+                "Romanian Deadlift 2 × 8（輕中量）",
+                "Chest Press 3 × 10",
+                "Seated Row 3 × 10",
+                "Calf Raise 2 × 15",
+                "Plank 2 × 45 秒"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -1313,6 +1769,51 @@
           "category": "run"
         },
         {
+          "date": "2026-12-23",
+          "week": 5,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜肌耐力",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Bulgarian Split Squat 3 × 8 / side（RPE 6–7）",
+                "Romanian Deadlift 3 × 8",
+                "Step-up 2 × 10 / side",
+                "Standing Calf Raise 3 × 18–20",
+                "Pallof Press 2 × 10 / side + Dead Bug 2 × 10 / side"
+              ],
+              "note": "增加後鏈與小腿耐力，但保留至少 2–3 下餘裕。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Bulgarian Split Squat 3 × 8 / side（RPE 6–7）",
+                "Romanian Deadlift 3 × 8",
+                "Step-up 2 × 10 / side",
+                "Standing Calf Raise 3 × 18–20",
+                "Pallof Press 2 × 10 / side + Dead Bug 2 × 10 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2026-12-24",
           "week": 9,
           "type": "MP",
@@ -1352,46 +1853,58 @@
         },
         {
           "date": "2026-12-25",
-          "week": 9,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 Light",
-          "duration": "30–40 MIN",
-          "summary": "輕量臀腿＋核心 · 30–40 MIN",
+          "week": 5,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Upper + Core",
+          "duration": "45–60 MIN",
+          "summary": "Upper + Core + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Bodyweight / Light Goblet Squat 2 × 10",
-                "Glute Bridge 2 × 12",
-                "Reverse Lunge 2 × 8 / side",
-                "Calf Raise 2 × 15",
-                "Dead Bug + Side Plank，各 2 組"
+                "Lat Pulldown 3 × 8–10",
+                "Incline Chest Press 3 × 8–10",
+                "Seated Row 3 × 10",
+                "Lateral Raise 2 × 12–15",
+                "Farmer Carry 3 × 40 秒",
+                "Pallof Press 2 × 10 / side"
               ],
-              "note": "長距離增加時降低肌力總量；保留 2–4 下餘裕，不做到力竭。"
+              "note": "Full Body 週也不做力竭；週日長跑優先度最高。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Bodyweight / Light Goblet Squat 2 × 10",
-                "Glute Bridge 2 × 12",
-                "Reverse Lunge 2 × 8 / side",
-                "Calf Raise 2 × 15",
-                "Dead Bug + Side Plank，各 2 組"
+                "Lat Pulldown 3 × 8–10",
+                "Incline Chest Press 3 × 8–10",
+                "Seated Row 3 × 10",
+                "Lateral Raise 2 × 12–15",
+                "Farmer Carry 3 × 40 秒",
+                "Pallof Press 2 × 10 / side"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -1478,6 +1991,51 @@
           "category": "run"
         },
         {
+          "date": "2027-01-06",
+          "week": 1,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜專項維持",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Split Squat 2 × 8 / side（RPE 6）",
+                "Single-leg RDL 2 × 8 / side",
+                "Step-up 2 × 8 / side",
+                "Calf Raise 3 × 15",
+                "Side Plank 2 × 30–40 秒 / side + Bird Dog 2 × 8 / side"
+              ],
+              "note": "專項期以維持為主；若影響隔天馬配／節奏課，先減組數。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Split Squat 2 × 8 / side（RPE 6）",
+                "Single-leg RDL 2 × 8 / side",
+                "Step-up 2 × 8 / side",
+                "Calf Raise 3 × 15",
+                "Side Plank 2 × 30–40 秒 / side + Bird Dog 2 × 8 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2027-01-07",
           "week": 11,
           "type": "MP",
@@ -1516,46 +2074,58 @@
         },
         {
           "date": "2027-01-08",
-          "week": 11,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 B",
-          "duration": "40–50 MIN",
-          "summary": "後鏈＋小腿 · 40–50 MIN",
+          "week": 1,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Upper Maintenance",
+          "duration": "45–60 MIN",
+          "summary": "Upper Maintenance + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Romanian Deadlift 或 Hip Thrust 3 × 8–10（RPE 6–7）",
-                "Step-up 3 × 8 / side",
-                "Single-leg RDL 2–3 × 8 / side",
-                "Seated / Bent-knee Calf Raise 3 × 15–20",
-                "Pallof Press 3 × 10 / side + Bird Dog 2 × 10 / side"
+                "Lat Pulldown 2–3 × 8–10",
+                "Chest Press 2–3 × 8–10",
+                "Seated Row 2–3 × 10",
+                "Shoulder / Lateral Raise 2 × 12",
+                "Farmer Carry 2 × 30 秒",
+                "Core 8–10 分鐘"
               ],
-              "note": "專項期以維持力量為主；保留 2–4 下餘裕，不做到力竭。"
+              "note": "高峰期 Gym 改以上肢與核心維持為主，避免腿部 DOMS。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Romanian Deadlift 或 Hip Thrust 3 × 8–10（RPE 6–7）",
-                "Step-up 3 × 8 / side",
-                "Single-leg RDL 2–3 × 8 / side",
-                "Seated / Bent-knee Calf Raise 3 × 15–20",
-                "Pallof Press 3 × 10 / side + Bird Dog 2 × 10 / side"
+                "Lat Pulldown 2–3 × 8–10",
+                "Chest Press 2–3 × 8–10",
+                "Seated Row 2–3 × 10",
+                "Shoulder / Lateral Raise 2 × 12",
+                "Farmer Carry 2 × 30 秒",
+                "Core 8–10 分鐘"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -1629,6 +2199,51 @@
           "category": "run"
         },
         {
+          "date": "2027-01-13",
+          "week": 2,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜專項維持",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Split Squat 2 × 8 / side（RPE 6）",
+                "Single-leg RDL 2 × 8 / side",
+                "Step-up 2 × 8 / side",
+                "Calf Raise 3 × 15",
+                "Side Plank 2 × 30–40 秒 / side + Bird Dog 2 × 8 / side"
+              ],
+              "note": "專項期以維持為主；若影響隔天馬配／節奏課，先減組數。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Split Squat 2 × 8 / side（RPE 6）",
+                "Single-leg RDL 2 × 8 / side",
+                "Step-up 2 × 8 / side",
+                "Calf Raise 3 × 15",
+                "Side Plank 2 × 30–40 秒 / side + Bird Dog 2 × 8 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2027-01-14",
           "week": 12,
           "type": "Interval",
@@ -1669,46 +2284,58 @@
         },
         {
           "date": "2027-01-15",
-          "week": 12,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 A",
-          "duration": "40–50 MIN",
-          "summary": "單腳穩定＋核心 · 40–50 MIN",
+          "week": 2,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Upper Maintenance",
+          "duration": "45–60 MIN",
+          "summary": "Upper Maintenance + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Goblet Squat 或 Leg Press 3 × 8–10（RPE 6–7）",
-                "Bulgarian Split Squat 3 × 8 / side",
-                "Romanian Deadlift 3 × 8",
-                "Standing Calf Raise 3 × 15–20",
-                "Dead Bug 3 × 10 / side + Side Plank 2 × 30–45 秒 / side"
+                "Lat Pulldown 2–3 × 8–10",
+                "Chest Press 2–3 × 8–10",
+                "Seated Row 2–3 × 10",
+                "Shoulder / Lateral Raise 2 × 12",
+                "Farmer Carry 2 × 30 秒",
+                "Core 8–10 分鐘"
               ],
-              "note": "避免大重量造成週日長跑殘留疲勞；保留 2–4 下餘裕，不做到力竭。"
+              "note": "高峰期 Gym 改以上肢與核心維持為主，避免腿部 DOMS。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Goblet Squat 或 Leg Press 3 × 8–10（RPE 6–7）",
-                "Bulgarian Split Squat 3 × 8 / side",
-                "Romanian Deadlift 3 × 8",
-                "Standing Calf Raise 3 × 15–20",
-                "Dead Bug 3 × 10 / side + Side Plank 2 × 30–45 秒 / side"
+                "Lat Pulldown 2–3 × 8–10",
+                "Chest Press 2–3 × 8–10",
+                "Seated Row 2–3 × 10",
+                "Shoulder / Lateral Raise 2 × 12",
+                "Farmer Carry 2 × 30 秒",
+                "Core 8–10 分鐘"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -1782,6 +2409,51 @@
           "category": "run"
         },
         {
+          "date": "2027-01-20",
+          "week": 3,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜專項維持",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Split Squat 2 × 8 / side（RPE 6）",
+                "Single-leg RDL 2 × 8 / side",
+                "Step-up 2 × 8 / side",
+                "Calf Raise 3 × 15",
+                "Side Plank 2 × 30–40 秒 / side + Bird Dog 2 × 8 / side"
+              ],
+              "note": "專項期以維持為主；若影響隔天馬配／節奏課，先減組數。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Split Squat 2 × 8 / side（RPE 6）",
+                "Single-leg RDL 2 × 8 / side",
+                "Step-up 2 × 8 / side",
+                "Calf Raise 3 × 15",
+                "Side Plank 2 × 30–40 秒 / side + Bird Dog 2 × 8 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2027-01-21",
           "week": 13,
           "type": "MP",
@@ -1820,46 +2492,58 @@
         },
         {
           "date": "2027-01-22",
-          "week": 13,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 B",
-          "duration": "40–45 MIN",
-          "summary": "後鏈＋小腿 · 40–45 MIN",
+          "week": 3,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Upper Maintenance",
+          "duration": "45–60 MIN",
+          "summary": "Upper Maintenance + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Romanian Deadlift 或 Hip Thrust 3 × 8–10（RPE 6–7）",
-                "Step-up 3 × 8 / side",
-                "Single-leg RDL 2–3 × 8 / side",
-                "Seated / Bent-knee Calf Raise 3 × 15–20",
-                "Pallof Press 3 × 10 / side + Bird Dog 2 × 10 / side"
+                "Lat Pulldown 2–3 × 8–10",
+                "Chest Press 2–3 × 8–10",
+                "Seated Row 2–3 × 10",
+                "Shoulder / Lateral Raise 2 × 12",
+                "Farmer Carry 2 × 30 秒",
+                "Core 8–10 分鐘"
               ],
-              "note": "維持後程支撐能力；保留 2–4 下餘裕，不做到力竭。"
+              "note": "高峰期 Gym 改以上肢與核心維持為主，避免腿部 DOMS。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Romanian Deadlift 或 Hip Thrust 3 × 8–10（RPE 6–7）",
-                "Step-up 3 × 8 / side",
-                "Single-leg RDL 2–3 × 8 / side",
-                "Seated / Bent-knee Calf Raise 3 × 15–20",
-                "Pallof Press 3 × 10 / side + Bird Dog 2 × 10 / side"
+                "Lat Pulldown 2–3 × 8–10",
+                "Chest Press 2–3 × 8–10",
+                "Seated Row 2–3 × 10",
+                "Shoulder / Lateral Raise 2 × 12",
+                "Farmer Carry 2 × 30 秒",
+                "Core 8–10 分鐘"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -1934,6 +2618,51 @@
           "category": "run"
         },
         {
+          "date": "2027-01-27",
+          "week": 4,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜專項維持",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Split Squat 2 × 8 / side（RPE 6）",
+                "Single-leg RDL 2 × 8 / side",
+                "Step-up 2 × 8 / side",
+                "Calf Raise 3 × 15",
+                "Side Plank 2 × 30–40 秒 / side + Bird Dog 2 × 8 / side"
+              ],
+              "note": "專項期以維持為主；若影響隔天馬配／節奏課，先減組數。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Split Squat 2 × 8 / side（RPE 6）",
+                "Single-leg RDL 2 × 8 / side",
+                "Step-up 2 × 8 / side",
+                "Calf Raise 3 × 15",
+                "Side Plank 2 × 30–40 秒 / side + Bird Dog 2 × 8 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2027-01-28",
           "week": 14,
           "type": "Tempo",
@@ -1972,46 +2701,58 @@
         },
         {
           "date": "2027-01-29",
-          "week": 14,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 A",
-          "duration": "35–45 MIN",
-          "summary": "下肢控制＋核心 · 35–45 MIN",
+          "week": 4,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Upper Maintenance",
+          "duration": "45–60 MIN",
+          "summary": "Upper Maintenance + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Goblet Squat 或 Leg Press 3 × 8–10（RPE 6–7）",
-                "Bulgarian Split Squat 3 × 8 / side",
-                "Romanian Deadlift 3 × 8",
-                "Standing Calf Raise 3 × 15–20",
-                "Dead Bug 3 × 10 / side + Side Plank 2 × 30–45 秒 / side"
+                "Lat Pulldown 2–3 × 8–10",
+                "Chest Press 2–3 × 8–10",
+                "Seated Row 2–3 × 10",
+                "Shoulder / Lateral Raise 2 × 12",
+                "Farmer Carry 2 × 30 秒",
+                "Core 8–10 分鐘"
               ],
-              "note": "訓練品質優先，不追 PR；保留 2–4 下餘裕，不做到力竭。"
+              "note": "高峰期 Gym 改以上肢與核心維持為主，避免腿部 DOMS。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Goblet Squat 或 Leg Press 3 × 8–10（RPE 6–7）",
-                "Bulgarian Split Squat 3 × 8 / side",
-                "Romanian Deadlift 3 × 8",
-                "Standing Calf Raise 3 × 15–20",
-                "Dead Bug 3 × 10 / side + Side Plank 2 × 30–45 秒 / side"
+                "Lat Pulldown 2–3 × 8–10",
+                "Chest Press 2–3 × 8–10",
+                "Seated Row 2–3 × 10",
+                "Shoulder / Lateral Raise 2 × 12",
+                "Farmer Carry 2 × 30 秒",
+                "Core 8–10 分鐘"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -2082,6 +2823,51 @@
           "category": "run"
         },
         {
+          "date": "2027-02-03",
+          "week": 5,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜專項維持",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Split Squat 2 × 8 / side（RPE 6）",
+                "Single-leg RDL 2 × 8 / side",
+                "Step-up 2 × 8 / side",
+                "Calf Raise 3 × 15",
+                "Side Plank 2 × 30–40 秒 / side + Bird Dog 2 × 8 / side"
+              ],
+              "note": "專項期以維持為主；若影響隔天馬配／節奏課，先減組數。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Split Squat 2 × 8 / side（RPE 6）",
+                "Single-leg RDL 2 × 8 / side",
+                "Step-up 2 × 8 / side",
+                "Calf Raise 3 × 15",
+                "Side Plank 2 × 30–40 秒 / side + Bird Dog 2 × 8 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2027-02-04",
           "week": 15,
           "type": "MP",
@@ -2120,46 +2906,58 @@
         },
         {
           "date": "2027-02-05",
-          "week": 15,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 Light",
-          "duration": "30–40 MIN",
-          "summary": "輕量臀腿＋小腿 · 30–40 MIN",
+          "week": 5,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Upper Maintenance",
+          "duration": "45–60 MIN",
+          "summary": "Upper Maintenance + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Bodyweight / Light Goblet Squat 2 × 10",
-                "Glute Bridge 2 × 12",
-                "Reverse Lunge 2 × 8 / side",
-                "Calf Raise 2 × 15",
-                "Dead Bug + Side Plank，各 2 組"
+                "Lat Pulldown 2–3 × 8–10",
+                "Chest Press 2–3 × 8–10",
+                "Seated Row 2–3 × 10",
+                "Shoulder / Lateral Raise 2 × 12",
+                "Farmer Carry 2 × 30 秒",
+                "Core 8–10 分鐘"
               ],
-              "note": "進入高峰期後開始減少總量；保留 2–4 下餘裕，不做到力竭。"
+              "note": "高峰期 Gym 改以上肢與核心維持為主，避免腿部 DOMS。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Bodyweight / Light Goblet Squat 2 × 10",
-                "Glute Bridge 2 × 12",
-                "Reverse Lunge 2 × 8 / side",
-                "Calf Raise 2 × 15",
-                "Dead Bug + Side Plank，各 2 組"
+                "Lat Pulldown 2–3 × 8–10",
+                "Chest Press 2–3 × 8–10",
+                "Seated Row 2–3 × 10",
+                "Shoulder / Lateral Raise 2 × 12",
+                "Farmer Carry 2 × 30 秒",
+                "Core 8–10 分鐘"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -2235,6 +3033,51 @@
           "category": "run"
         },
         {
+          "date": "2027-02-10",
+          "week": 6,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜專項維持",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Split Squat 2 × 8 / side（RPE 6）",
+                "Single-leg RDL 2 × 8 / side",
+                "Step-up 2 × 8 / side",
+                "Calf Raise 3 × 15",
+                "Side Plank 2 × 30–40 秒 / side + Bird Dog 2 × 8 / side"
+              ],
+              "note": "專項期以維持為主；若影響隔天馬配／節奏課，先減組數。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Split Squat 2 × 8 / side（RPE 6）",
+                "Single-leg RDL 2 × 8 / side",
+                "Step-up 2 × 8 / side",
+                "Calf Raise 3 × 15",
+                "Side Plank 2 × 30–40 秒 / side + Bird Dog 2 × 8 / side"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2027-02-11",
           "week": 16,
           "type": "Tempo",
@@ -2274,46 +3117,58 @@
         },
         {
           "date": "2027-02-12",
-          "week": 16,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "跑者肌力 Light",
-          "duration": "25–35 MIN",
-          "summary": "核心＋穩定 · 25–35 MIN",
+          "week": 6,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Upper Maintenance",
+          "duration": "45–60 MIN",
+          "summary": "Upper Maintenance + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "Bodyweight / Light Goblet Squat 2 × 10",
-                "Glute Bridge 2 × 12",
-                "Reverse Lunge 2 × 8 / side",
-                "Calf Raise 2 × 15",
-                "Dead Bug + Side Plank，各 2 組"
+                "Lat Pulldown 2–3 × 8–10",
+                "Chest Press 2–3 × 8–10",
+                "Seated Row 2–3 × 10",
+                "Shoulder / Lateral Raise 2 × 12",
+                "Farmer Carry 2 × 30 秒",
+                "Core 8–10 分鐘"
               ],
-              "note": "只維持刺激，不製造延遲性痠痛；保留 2–4 下餘裕，不做到力竭。"
+              "note": "高峰期 Gym 改以上肢與核心維持為主，避免腿部 DOMS。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "Bodyweight / Light Goblet Squat 2 × 10",
-                "Glute Bridge 2 × 12",
-                "Reverse Lunge 2 × 8 / side",
-                "Calf Raise 2 × 15",
-                "Dead Bug + Side Plank，各 2 組"
+                "Lat Pulldown 2–3 × 8–10",
+                "Chest Press 2–3 × 8–10",
+                "Seated Row 2–3 × 10",
+                "Shoulder / Lateral Raise 2 × 12",
+                "Farmer Carry 2 × 30 秒",
+                "Core 8–10 分鐘"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -2401,6 +3256,51 @@
           "category": "run"
         },
         {
+          "date": "2027-02-17",
+          "week": 1,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜Taper 維持",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Bodyweight Split Squat 2 × 8 / side",
+                "Glute Bridge 2 × 10",
+                "Calf Raise 2 × 12–15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "Taper 不追求進步，只維持神經感覺與活動度。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Bodyweight Split Squat 2 × 8 / side",
+                "Glute Bridge 2 × 10",
+                "Calf Raise 2 × 12–15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2027-02-18",
           "week": 17,
           "type": "MP",
@@ -2439,46 +3339,56 @@
         },
         {
           "date": "2027-02-19",
-          "week": 17,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "Taper Strength",
-          "duration": "25–35 MIN",
-          "summary": "低量肌力維持 · 25–35 MIN",
+          "week": 1,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Taper Upper + Mobility",
+          "duration": "45–60 MIN",
+          "summary": "Taper Upper + Mobility + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "輕量 Squat 或 Leg Press 2 × 8（RPE 5–6）",
-                "Glute Bridge 2 × 10",
-                "Calf Raise 2 × 12–15",
-                "Dead Bug 2 × 8 / side",
-                "髖、踝活動度 8–10 分鐘"
+                "Lat Pulldown 2 × 10（輕量）",
+                "Chest Press 2 × 10（輕量）",
+                "Seated Row 2 × 10（輕量）",
+                "Band Pull-apart 2 × 15",
+                "Core 6–8 分鐘"
               ],
-              "note": "減量期保留力量感，重量與組數都下降；保留 2–4 下餘裕，不做到力竭。"
+              "note": "Taper 只維持，動作結束時應感覺還很有餘裕。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "輕量 Squat 或 Leg Press 2 × 8（RPE 5–6）",
-                "Glute Bridge 2 × 10",
-                "Calf Raise 2 × 12–15",
-                "Dead Bug 2 × 8 / side",
-                "髖、踝活動度 8–10 分鐘"
+                "Lat Pulldown 2 × 10（輕量）",
+                "Chest Press 2 × 10（輕量）",
+                "Seated Row 2 × 10（輕量）",
+                "Band Pull-apart 2 × 15",
+                "Core 6–8 分鐘"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },
@@ -2552,6 +3462,51 @@
           "category": "run"
         },
         {
+          "date": "2027-02-24",
+          "week": 2,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜Taper 維持",
+          "duration": "35–45 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–45 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Bodyweight Split Squat 2 × 8 / side",
+                "Glute Bridge 2 × 10",
+                "Calf Raise 2 × 12–15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "Taper 不追求進步，只維持神經感覺與活動度。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "Bodyweight Split Squat 2 × 8 / side",
+                "Glute Bridge 2 × 10",
+                "Calf Raise 2 × 12–15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "本課本來就是室內肌力；照主課表即可。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "快走或飛輪 Easy 20–25 分鐘",
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 8–10 分鐘"
+              ],
+              "note": "工作疲勞就降量；疼痛、發燒或疑似受傷則直接休息。"
+            }
+          }
+        },
+        {
           "date": "2027-02-25",
           "week": 18,
           "type": "MP",
@@ -2590,46 +3545,56 @@
         },
         {
           "date": "2027-02-26",
-          "week": 18,
-          "category": "strength",
-          "type": "Strength",
-          "shortLabel": "STR",
-          "title": "Taper Strength",
-          "duration": "20–30 MIN",
-          "summary": "啟動＋核心 · 20–30 MIN",
+          "week": 2,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Taper Upper + Mobility",
+          "duration": "45–60 MIN",
+          "summary": "Taper Upper + Mobility + Recovery · 45–60 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy walk / Bike 10–15 分鐘",
+              "小腿、股四頭、臀肌伸展各 30–45 秒 × 2",
+              "髖屈肌與踝關節 Mobility 5–8 分鐘",
+              "補水，正常吃一份碳水＋蛋白質"
+            ],
+            "note": "把 Recovery 當成這堂 Gym 的收尾，不需要做到疼痛。"
+          },
           "plans": {
             "main": {
-              "title": "主課表",
+              "title": "GYM 主課表",
               "steps": [
-                "輕量 Squat 或 Leg Press 2 × 8（RPE 5–6）",
-                "Glute Bridge 2 × 10",
-                "Calf Raise 2 × 12–15",
-                "Dead Bug 2 × 8 / side",
-                "髖、踝活動度 8–10 分鐘"
+                "Lat Pulldown 2 × 10（輕量）",
+                "Chest Press 2 × 10（輕量）",
+                "Seated Row 2 × 10（輕量）",
+                "Band Pull-apart 2 × 15",
+                "Core 6–8 分鐘"
               ],
-              "note": "以啟動和活動度為主，不做到疲勞；保留 2–4 下餘裕，不做到力竭。"
+              "note": "Taper 只維持，動作結束時應感覺還很有餘裕。"
             },
             "rain": {
               "title": "室內 / 雨備",
               "steps": [
-                "輕量 Squat 或 Leg Press 2 × 8（RPE 5–6）",
-                "Glute Bridge 2 × 10",
-                "Calf Raise 2 × 12–15",
-                "Dead Bug 2 × 8 / side",
-                "髖、踝活動度 8–10 分鐘"
+                "Lat Pulldown 2 × 10（輕量）",
+                "Chest Press 2 × 10（輕量）",
+                "Seated Row 2 × 10（輕量）",
+                "Band Pull-apart 2 × 15",
+                "Core 6–8 分鐘"
               ],
-              "note": "肌力課原則上可在室內照常完成；若交通受影響，可改用徒手版本。"
+              "note": "Gym 原則上照常；若無法到健身房，改彈力帶上肢＋核心 30–40 分鐘。"
             },
             "fatigue": {
-              "title": "疲勞備案",
+              "title": "疲勞版",
               "steps": [
                 "飛輪 Easy 20–30 分鐘或快走 6,000–8,000 步",
-                "Glute Bridge 2 × 12",
-                "Calf Raise 2 × 15",
-                "Dead Bug 2 × 8 / side",
-                "Mobility 8–10 分鐘"
+                "Push-up 2 × 8–12",
+                "Band / Cable Row 2 × 12",
+                "Plank 2 × 30 秒",
+                "Mobility 10 分鐘"
               ],
-              "note": "如果只是工作疲勞，降量但保留活動；若有疼痛、發燒或疑似受傷則休息。"
+              "note": "疲勞時保留動作與活動量，不追重量。"
             }
           }
         },

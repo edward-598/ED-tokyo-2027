@@ -1,9 +1,8 @@
 /*
-  簡易 Service Worker
-  讓已經開過的主要檔案，在沒有網路時也有機會正常開啟。
-  若之後更新很多檔案，可把 CACHE_NAME 從 v1 改成 v2，讓瀏覽器重新快取。
+  Tokyo 2027 V1.2 Service Worker
+  更新 CACHE_NAME 可以避免 GitHub Pages 還顯示舊版程式。
 */
-const CACHE_NAME = "tokyo-2027-v1";
+const CACHE_NAME = "tokyo-2027-v1-2";
 const ASSETS = [
   "./",
   "./index.html",
@@ -16,11 +15,27 @@ const ASSETS = [
 ];
 
 self.addEventListener("install", event => {
+  self.skipWaiting();
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS)));
+});
+
+self.addEventListener("activate", event => {
+  event.waitUntil(
+    caches.keys().then(keys => Promise.all(
+      keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
+    ))
+  );
+  self.clients.claim();
 });
 
 self.addEventListener("fetch", event => {
   event.respondWith(
-    caches.match(event.request).then(cached => cached || fetch(event.request))
+    fetch(event.request)
+      .then(response => {
+        const copy = response.clone();
+        caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
+        return response;
+      })
+      .catch(() => caches.match(event.request))
   );
 });

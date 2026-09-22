@@ -1,18 +1,23 @@
 /* =========================================================
-   app.js
+   TOKYO 2027 - app.js (V1.2)
    ---------------------------------------------------------
-   整個 V1 的主程式。
+   這支檔案是網站的「主控制器」。
 
-   你之後最常改的地方通常不會在這裡，
-   而是在 data/training.json。
+   一般修改課表時，你幾乎不需要改這裡；
+   課表內容請優先修改 data/training.json。
 
-   本檔案主要負責：
-   1) 讀取課表資料
-   2) 判斷現在在哪個 Phase / Week
-   3) 顯示 Today
-   4) 顯示 Calendar
-   5) 開啟單日課表
-   6) 寫入完成紀錄
+   V1.2 的訓練分類：
+   - RUN      ：跑步主課
+   - STRENGTH ：跑者專項肌力（臀腿 / 小腿 / 核心 / 單腳穩定）
+   - GYM      ：一般健身房重訓（Upper / Lower / Full Body）
+   - RECOVERY ：目前放在 GYM 課內作為收尾區塊
+
+   主要功能：
+   1) Today 首頁
+   2) Phase / Week / 完成率
+   3) Training Calendar
+   4) 單日詳細課表
+   5) MAIN / RAIN / FATIGUE 三種完成方式
    ========================================================= */
 
 const App = {
@@ -26,7 +31,7 @@ const App = {
 
   async init() {
     try {
-      const response = await fetch("data/training.json");
+      const response = await fetch("data/training.json", { cache: "no-store" });
       if (!response.ok) throw new Error("training.json 載入失敗");
 
       this.data = await response.json();
@@ -41,16 +46,25 @@ const App = {
       document.getElementById("app").innerHTML = `
         <div class="card empty-state">
           <h2>課表載入失敗</h2>
-          <p>請確認 data/training.json 是否存在，並用 GitHub Pages / 本機伺服器開啟。</p>
+          <p>請確認 data/training.json 存在，並使用 GitHub Pages / Live Server 開啟。</p>
         </div>`;
     }
   },
 
   indexData() {
+    this.workoutMap.clear();
+    this.phaseMap.clear();
+
     this.data.phases.forEach(phase => {
       this.phaseMap.set(phase.id, phase);
       phase.workouts.forEach(workout => {
         workout.phaseId = phase.id;
+
+        // V1.2 目前採「一天一張正式課表卡」。
+        // 若未來要同一天安排兩堂正式課，再把 Map 改成 Array 即可。
+        if (this.workoutMap.has(workout.date)) {
+          console.warn(`同一天有兩堂正式課：${workout.date}。目前只保留最後一堂。`);
+        }
         this.workoutMap.set(workout.date, workout);
       });
     });
@@ -70,7 +84,10 @@ const App = {
   bindDialog() {
     const dialog = document.getElementById("workoutDialog");
     dialog.addEventListener("click", event => {
-      if (event.target === dialog) dialog.close();
+      if (event.target === dialog) {
+        dialog.close();
+        this.render();
+      }
     });
   },
 
@@ -102,19 +119,18 @@ const App = {
   getPhaseWeek(phase, today = new Date()) {
     if (!phase) return null;
     const start = TokyoCalendar.parseISODate(phase.startDate);
-    const diffMs = today.setHours(0,0,0,0) - start.setHours(0,0,0,0);
-    const diffDays = Math.floor(diffMs / 86400000);
+    const current = new Date(today);
+    current.setHours(0, 0, 0, 0);
+    start.setHours(0, 0, 0, 0);
+    const diffDays = Math.floor((current - start) / 86400000);
     return Math.min(phase.weeks, Math.max(1, Math.floor(diffDays / 7) + 1));
   },
 
-  // 統計某個 Phase 的完成度。
-  // V1.1 開始把「跑步」和「肌力」分開統計，
-  // 因此首頁不只會看到總完成率，也能知道兩種類型各自完成多少。
+  // 計算某 Phase 的總完成率，以及 RUN / STRENGTH / GYM 各自完成率。
   getCompletionStats(phase) {
     const workouts = phase.workouts;
-    const completedWorkouts = workouts.filter(w => TokyoStorage.get(w.date));
 
-    const calc = (category) => {
+    const calc = category => {
       const list = workouts.filter(w => w.category === category);
       const completed = list.filter(w => TokyoStorage.get(w.date)).length;
       return {
@@ -124,13 +140,21 @@ const App = {
       };
     };
 
+    const completed = workouts.filter(w => TokyoStorage.get(w.date)).length;
     return {
       total: workouts.length,
-      completed: completedWorkouts.length,
-      percent: workouts.length ? Math.round((completedWorkouts.length / workouts.length) * 100) : 0,
+      completed,
+      percent: workouts.length ? Math.round((completed / workouts.length) * 100) : 0,
       run: calc("run"),
-      strength: calc("strength")
+      strength: calc("strength"),
+      gym: calc("gym")
     };
+  },
+
+  getAllProgramStats() {
+    const workouts = this.data.phases.flatMap(p => p.workouts);
+    const count = category => workouts.filter(w => w.category === category).length;
+    return { run: count("run"), strength: count("strength"), gym: count("gym") };
   },
 
   getTodayWorkout(today = new Date()) {
@@ -139,8 +163,25 @@ const App = {
 
   getNextWorkout(today = new Date()) {
     const todayISO = TokyoCalendar.toISODate(today);
-    const all = [...this.workoutMap.values()].sort((a, b) => a.date.localeCompare(b.date));
-    return all.find(w => w.date > todayISO) || null;
+    return [...this.workoutMap.values()]
+      .sort((a, b) => a.date.localeCompare(b.date))
+      .find(w => w.date > todayISO) || null;
+  },
+
+  categoryLabel(category) {
+    return ({
+      run: "RUN",
+      strength: "STRENGTH",
+      gym: "GYM"
+    })[category] || category.toUpperCase();
+  },
+
+  categoryDescription(category) {
+    return ({
+      run: "跑步主課",
+      strength: "跑者專項肌力",
+      gym: "一般健身房重訓"
+    })[category] || "TRAINING";
   },
 
   renderToday() {
@@ -153,10 +194,11 @@ const App = {
     let heroHTML = "";
 
     if (currentPhase) {
-      const week = this.getPhaseWeek(currentPhase, new Date());
+      const week = this.getPhaseWeek(currentPhase, today);
       const stats = this.getCompletionStats(currentPhase);
+
       heroHTML = `
-        <section class="card hero-card">
+        <section class="card hero-card" style="--accent:${currentPhase.color}">
           <span class="phase-pill">${currentPhase.label}</span>
           <h2 class="hero-title">${currentPhase.name}</h2>
           <p class="hero-subtitle">Week ${week} / ${currentPhase.weeks}</p>
@@ -166,40 +208,47 @@ const App = {
             <div class="progress-number">${stats.percent}%</div>
           </div>
 
-          <div class="metrics">
+          <div class="metrics metrics-four">
             <div class="metric"><strong>${week}/${currentPhase.weeks}</strong><span>目前週次</span></div>
-            <div class="metric"><strong>${stats.run.completed}/${stats.run.total}</strong><span>跑步完成</span></div>
-            <div class="metric"><strong>${stats.strength.completed}/${stats.strength.total}</strong><span>肌力完成</span></div>
+            <div class="metric"><strong>${stats.run.completed}/${stats.run.total}</strong><span>RUN</span></div>
+            <div class="metric"><strong>${stats.strength.completed}/${stats.strength.total}</strong><span>STRENGTH</span></div>
+            <div class="metric"><strong>${stats.gym.completed}/${stats.gym.total}</strong><span>GYM</span></div>
           </div>
 
           <div class="progress-breakdown">
-            <div class="progress-mini">
-              <div><span>RUNNING</span><strong>${stats.run.percent}%</strong></div>
-              <div class="progress-track"><div class="progress-fill" style="width:${stats.run.percent}%"></div></div>
-            </div>
-            <div class="progress-mini">
-              <div><span>STRENGTH</span><strong>${stats.strength.percent}%</strong></div>
-              <div class="progress-track"><div class="progress-fill" style="width:${stats.strength.percent}%"></div></div>
-            </div>
+            ${this.progressMini("RUNNING", stats.run)}
+            ${this.progressMini("STRENGTH", stats.strength)}
+            ${this.progressMini("GYM", stats.gym)}
           </div>
         </section>`;
     } else {
       const firstPhase = this.data.phases[0];
       const raceDate = TokyoCalendar.parseISODate(this.data.raceDate);
       const phaseStart = TokyoCalendar.parseISODate(firstPhase.startDate);
-      const todayStart = new Date(); todayStart.setHours(0,0,0,0);
+      const todayStart = new Date();
+      todayStart.setHours(0, 0, 0, 0);
       const daysToStart = Math.ceil((phaseStart - todayStart) / 86400000);
       const daysToRace = Math.ceil((raceDate - todayStart) / 86400000);
+      const totals = this.getAllProgramStats();
 
       heroHTML = `
         <section class="card hero-card">
           <span class="phase-pill">PRE-SEASON</span>
           <h2 class="hero-title">Tokyo 2027</h2>
-          <p class="hero-subtitle">正式課表開始前，先維持規律與健康。</p>
+          <p class="hero-subtitle">正式課表開始前，先以自主訓練、生活行程與健康為主。</p>
           <div class="metrics">
             <div class="metric"><strong>${Math.max(daysToStart, 0)}</strong><span>距 Phase 1 天數</span></div>
             <div class="metric"><strong>${Math.max(daysToRace, 0)}</strong><span>距比賽天數</span></div>
             <div class="metric"><strong>3</strong><span>核心週跑次</span></div>
+          </div>
+
+          <div class="program-preview">
+            <div class="preview-title">正式課表已排入</div>
+            <div class="preview-grid">
+              <div><strong>${totals.run}</strong><span>RUN</span></div>
+              <div><strong>${totals.strength}</strong><span>STRENGTH</span></div>
+              <div><strong>${totals.gym}</strong><span>GYM</span></div>
+            </div>
           </div>
         </section>`;
     }
@@ -209,25 +258,32 @@ const App = {
       : `
         <div class="section-title"><h2>TODAY</h2><small>${TokyoCalendar.longDateLabel(TokyoCalendar.toISODate(today))}</small></div>
         <section class="card">
-          <h3>Recovery / 自主安排</h3>
-          <p class="notice">今天沒有正式跑課。可做輕鬆走路、伸展、核心、上肢或依身體狀況安排恢復。</p>
+          <span class="category-badge neutral">RECOVERY / FREE</span>
+          <h3 style="margin-top:12px">自主安排</h3>
+          <p class="notice">今天沒有正式課表。可依身體狀況安排輕鬆走路、伸展、Mobility、上肢或完全休息。</p>
         </section>`;
 
-    const nextSection = nextWorkout
-      ? `
-        <div class="section-title"><h2>NEXT</h2><small>下一堂</small></div>
-        <section class="card next-card workout-card" data-open-workout="${nextWorkout.date}">
-          <div>
-            <div class="workout-type">${nextWorkout.type}</div>
-            <h3>${TokyoCalendar.longDateLabel(nextWorkout.date)}</h3>
-            <div class="workout-meta">${nextWorkout.title} · ${nextWorkout.distanceKm ? `${nextWorkout.distanceKm} KM` : nextWorkout.duration}</div>
-          </div>
-          <div class="arrow">→</div>
-        </section>`
-      : "";
+    const nextSection = nextWorkout ? `
+      <div class="section-title"><h2>NEXT</h2><small>下一堂</small></div>
+      <section class="card next-card workout-card" data-open-workout="${nextWorkout.date}" style="--accent:${this.phaseMap.get(nextWorkout.phaseId).color}">
+        <div>
+          <span class="category-badge">${this.categoryLabel(nextWorkout.category)}</span>
+          <h3 style="margin-top:10px">${TokyoCalendar.longDateLabel(nextWorkout.date)} · ${nextWorkout.title}</h3>
+          <div class="workout-meta">${nextWorkout.summary}</div>
+        </div>
+        <div class="arrow">→</div>
+      </section>` : "";
 
     app.innerHTML = heroHTML + todaySection + nextSection;
     this.bindWorkoutOpeners();
+  },
+
+  progressMini(label, stats) {
+    return `
+      <div class="progress-mini">
+        <div><span>${label}</span><strong>${stats.completed}/${stats.total} · ${stats.percent}%</strong></div>
+        <div class="progress-track"><div class="progress-fill" style="width:${stats.percent}%"></div></div>
+      </div>`;
   },
 
   renderWorkoutSummary(workout, sectionName) {
@@ -238,13 +294,15 @@ const App = {
       <section class="card workout-card" data-open-workout="${workout.date}" style="--accent:${phase.color}">
         <div class="workout-heading">
           <div>
-            <div class="workout-type">${workout.type}</div>
+            <span class="category-badge">${this.categoryLabel(workout.category)}</span>
+            <div class="workout-type" style="margin-top:10px">${this.categoryDescription(workout.category)}</div>
             <h3>${workout.title}</h3>
           </div>
           ${completion ? `<span class="status-pill">✓ ${this.modeLabel(completion.mode)}</span>` : ""}
         </div>
         <div class="workout-distance">${workout.distanceKm ?? workout.duration ?? ""}${workout.distanceKm ? " <small>KM</small>" : ""}</div>
         <p class="workout-meta">${workout.summary}</p>
+        ${workout.recovery ? `<div class="recovery-preview">+ RECOVERY · Mobility / 伸展收尾</div>` : ""}
         <button class="primary-button" type="button">查看單日課表</button>
       </section>`;
   },
@@ -260,6 +318,10 @@ const App = {
           <button class="icon-button" id="prevMonth" type="button">←</button>
           <h2>${TokyoCalendar.monthLabel(this.calendarDate)}</h2>
           <button class="icon-button" id="nextMonth" type="button">→</button>
+        </div>
+
+        <div class="training-type-legend">
+          <span>RUN 跑步</span><span>STR 跑者肌力</span><span>GYM 健身＋Recovery</span>
         </div>
 
         <div class="weekdays">
@@ -279,13 +341,14 @@ const App = {
               completion ? "done" : ""
             ].filter(Boolean).join(" ");
 
+            const detail = workout?.distanceKm ? `${workout.distanceKm}K` : (workout?.duration || "").replace(" MIN", "m");
             return `
               <button class="${classes}" type="button"
                 ${workout ? `data-open-workout="${cell.iso}"` : "disabled"}
                 style="--day-color:${phase?.color || "#ffffff"}">
                 <span class="day-number">${cell.date.getDate()}</span>
-                ${workout ? `<span class="day-workout">${workout.shortLabel}<br>${workout.distanceKm ? `${workout.distanceKm}K` : (workout.category === "strength" ? "GYM" : "")}</span>` : ""}
-                ${completion ? `<span class="day-check">✓ ${this.modeLabel(completion.mode)}</span>` : ""}
+                ${workout ? `<span class="day-category">${this.categoryLabel(workout.category)}</span><span class="day-workout">${workout.shortLabel}<br>${detail}</span>` : ""}
+                ${completion ? `<span class="day-check">✓</span>` : ""}
               </button>`;
           }).join("")}
         </div>
@@ -334,12 +397,23 @@ const App = {
     const completion = TokyoStorage.get(workout.date);
     const plan = workout.plans[this.activeMode];
 
+    const recoveryHTML = workout.recovery ? `
+      <div class="recovery-box">
+        <div class="recovery-label">RECOVERY</div>
+        <h3>${workout.recovery.title.replace("RECOVERY｜", "")}</h3>
+        <ul class="plan-list">
+          ${workout.recovery.steps.map(step => `<li>${step}</li>`).join("")}
+        </ul>
+        ${workout.recovery.note ? `<p class="plan-note">${workout.recovery.note}</p>` : ""}
+      </div>` : "";
+
     const content = document.getElementById("workoutDialogContent");
     content.innerHTML = `
       <div class="dialog-inner" style="--accent:${phase.color}">
         <div class="dialog-head">
           <div>
             <span class="phase-pill">${phase.label}</span>
+            <div style="margin-top:12px"><span class="category-badge">${this.categoryLabel(workout.category)}</span></div>
             <h2 style="margin-top:12px">${workout.title}</h2>
             <p class="workout-meta">${TokyoCalendar.longDateLabel(workout.date)} · ${workout.summary}</p>
           </div>
@@ -347,7 +421,7 @@ const App = {
         </div>
 
         <div class="mode-tabs">
-          ${["main","rain","fatigue"].map(mode => `
+          ${["main", "rain", "fatigue"].map(mode => `
             <button class="mode-tab ${this.activeMode === mode ? "active" : ""}" data-mode="${mode}" type="button">
               ${this.modeLabel(mode)}
             </button>`).join("")}
@@ -361,11 +435,13 @@ const App = {
           ${plan.note ? `<p class="plan-note">${plan.note}</p>` : ""}
         </div>
 
+        ${recoveryHTML}
+
         <div class="completion-panel">
           <h3>完成方式</h3>
-          <p class="notice">完成主課表或備用課表都可以記錄。若是疼痛、發燒或疑似受傷，不要硬做疲勞版，改以休息 / 就醫為優先。</p>
+          <p class="notice">主課表、雨備或疲勞版都可以記錄完成。若是疼痛、發燒或疑似受傷，休息優先，不用硬補。</p>
           <div class="completion-buttons">
-            ${["main","rain","fatigue"].map(mode => `
+            ${["main", "rain", "fatigue"].map(mode => `
               <button class="complete-choice ${completion?.mode === mode ? "selected" : ""}" data-complete-mode="${mode}" type="button">
                 ${completion?.mode === mode ? "✓ " : ""}${this.modeLabel(mode)}
               </button>`).join("")}
