@@ -349,3 +349,28 @@ h3 { font-size: 1rem; margin-bottom: 8px; }
   .calendar-day { min-height: 92px; padding: 10px; }
   .day-workout { font-size: 0.78rem; }
 }
+
+/* =========================================================
+   V1.1：跑步 / 肌力完成度分開顯示
+   ---------------------------------------------------------
+   首頁總進度條下面再放兩個較小的進度條。
+   之後若想加入 CROSS / RECOVERY，也可以沿用這個結構。
+   ========================================================= */
+.progress-breakdown {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.progress-mini > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.progress-mini strong {
+  font-size: 0.85rem;
+}
