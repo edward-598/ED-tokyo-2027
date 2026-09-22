@@ -107,11 +107,30 @@ const App = {
     return Math.min(phase.weeks, Math.max(1, Math.floor(diffDays / 7) + 1));
   },
 
+  // 統計某個 Phase 的完成度。
+  // V1.1 開始把「跑步」和「肌力」分開統計，
+  // 因此首頁不只會看到總完成率，也能知道兩種類型各自完成多少。
   getCompletionStats(phase) {
-    const total = phase.workouts.length;
-    const completed = phase.workouts.filter(w => TokyoStorage.get(w.date)).length;
-    const percent = total === 0 ? 0 : Math.round((completed / total) * 100);
-    return { total, completed, percent };
+    const workouts = phase.workouts;
+    const completedWorkouts = workouts.filter(w => TokyoStorage.get(w.date));
+
+    const calc = (category) => {
+      const list = workouts.filter(w => w.category === category);
+      const completed = list.filter(w => TokyoStorage.get(w.date)).length;
+      return {
+        total: list.length,
+        completed,
+        percent: list.length ? Math.round((completed / list.length) * 100) : 0
+      };
+    };
+
+    return {
+      total: workouts.length,
+      completed: completedWorkouts.length,
+      percent: workouts.length ? Math.round((completedWorkouts.length / workouts.length) * 100) : 0,
+      run: calc("run"),
+      strength: calc("strength")
+    };
   },
 
   getTodayWorkout(today = new Date()) {
@@ -149,8 +168,19 @@ const App = {
 
           <div class="metrics">
             <div class="metric"><strong>${week}/${currentPhase.weeks}</strong><span>目前週次</span></div>
-            <div class="metric"><strong>${stats.completed}/${stats.total}</strong><span>完成課次</span></div>
-            <div class="metric"><strong>${currentPhase.weeklyRuns}</strong><span>每週跑步</span></div>
+            <div class="metric"><strong>${stats.run.completed}/${stats.run.total}</strong><span>跑步完成</span></div>
+            <div class="metric"><strong>${stats.strength.completed}/${stats.strength.total}</strong><span>肌力完成</span></div>
+          </div>
+
+          <div class="progress-breakdown">
+            <div class="progress-mini">
+              <div><span>RUNNING</span><strong>${stats.run.percent}%</strong></div>
+              <div class="progress-track"><div class="progress-fill" style="width:${stats.run.percent}%"></div></div>
+            </div>
+            <div class="progress-mini">
+              <div><span>STRENGTH</span><strong>${stats.strength.percent}%</strong></div>
+              <div class="progress-track"><div class="progress-fill" style="width:${stats.strength.percent}%"></div></div>
+            </div>
           </div>
         </section>`;
     } else {
@@ -254,7 +284,7 @@ const App = {
                 ${workout ? `data-open-workout="${cell.iso}"` : "disabled"}
                 style="--day-color:${phase?.color || "#ffffff"}">
                 <span class="day-number">${cell.date.getDate()}</span>
-                ${workout ? `<span class="day-workout">${workout.shortLabel}<br>${workout.distanceKm ? `${workout.distanceKm}K` : ""}</span>` : ""}
+                ${workout ? `<span class="day-workout">${workout.shortLabel}<br>${workout.distanceKm ? `${workout.distanceKm}K` : (workout.category === "strength" ? "GYM" : "")}</span>` : ""}
                 ${completion ? `<span class="day-check">✓ ${this.modeLabel(completion.mode)}</span>` : ""}
               </button>`;
           }).join("")}
