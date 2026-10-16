@@ -190,7 +190,7 @@ const App = {
   categoryDescription(category) {
     return ({
       run: "跑步主課",
-      class: "跑班 / 教練課",
+      class: "課程 / 教練課",
       strength: "跑者專項肌力",
       gym: "一般健身房重訓",
       recovery: "恢復 / Mobility"
