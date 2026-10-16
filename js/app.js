@@ -875,15 +875,15 @@ const App = {
     ctx.fillText("TRAINING COMPLETION", 94, 615);
 
     const categoryRows = [
-      ["run", "RUN", stats.run],
-      ["strength", "STRENGTH", stats.strength],
-      ["gym", "GYM", stats.gym],
-      ["recovery", "RECOVERY", stats.recovery]
+      ["↗", "RUN", stats.run],
+      ["◇", "STRENGTH", stats.strength],
+      ["▣", "GYM", stats.gym],
+      ["○", "RECOVERY", stats.recovery]
     ];
 
     let y = 740;
-    categoryRows.forEach(([icon, label, item]) => {
-      this.drawCategoryIcon(ctx, icon, 108, y - 8);
+    categoryRows.forEach(([symbol, label, item]) => {
+      this.drawShareRecordIcon(ctx, symbol, 108, y - 10);
       ctx.fillStyle = "#ffffff";
       ctx.font = "700 28px Arial, sans-serif";
       ctx.fillText(label, 160, y);
@@ -934,7 +934,6 @@ const App = {
 
     const planeX = lineX + lineW * journey.percent / 100;
     this.drawPlaneIcon(ctx, Math.min(Math.max(planeX, lineX + 10), lineX + lineW - 10), lineY + 6, accent);
-    this.drawTokyoTower(ctx, 930, lineY + 6, "#ffffff");
 
     ctx.fillStyle = "rgba(255,255,255,.55)";
     ctx.font = "600 18px Arial, sans-serif";
@@ -973,6 +972,22 @@ const App = {
     const g = (num >> 8) & 255;
     const b = num & 255;
     return `rgba(${r},${g},${b},${alpha})`;
+  },
+
+  drawShareRecordIcon(ctx, symbol, x, y) {
+    ctx.save();
+    ctx.strokeStyle = "rgba(255,255,255,.35)";
+    ctx.lineWidth = 2;
+    this.roundRect(ctx, x - 15, y - 15, 30, 30, 9);
+    ctx.stroke();
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "700 18px Arial, sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(symbol, x, y + 1);
+    ctx.textAlign = "left";
+    ctx.textBaseline = "alphabetic";
+    ctx.restore();
   },
 
   drawCategoryIcon(ctx, type, x, y) {
