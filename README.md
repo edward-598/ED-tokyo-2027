@@ -1,95 +1,88 @@
-# Tokyo 2027 Training — V1.2
+# Tokyo 2027 Training — V1.3
 
 手機優先的個人東京馬拉松訓練儀表板。
 
-## V1.2 這次新增什麼？
+## V1.3 更新重點
 
-V1.2 把課表正式分成三條訓練線：
+這次把正式訓練起點提前到 **2026/10/12**。
 
-- `RUN`：跑步主課（Easy / Tempo / Interval / MP / LSD）
-- `STRENGTH`：跑者專項肌力（臀腿 / 小腿 / 核心 / 單腳穩定）
-- `GYM`：一般健身房重訓（Upper / Full Body 等）
-- `RECOVERY`：目前整合在 GYM 課程底部，作為伸展 / Mobility / 恢復收尾
+Phase 1 由原本 4 週擴成 **6 週（10/12–11/22）**，後面的 Phase 2～4 日期維持不動。
 
-Calendar 點開某一天後，會直接看到該日完整課表。
+新增兩週銜接期：
 
-四個 Phase 的所有訓練類型都沿用該 Phase 主色：
+- Week 1｜10/12–10/18：恢復、Easy、跑者肌力、節奏入門、Gym、14–16K LSD
+- Week 2｜10/19–10/25：跑班前 Easy、10/21 Coach Session、跑班後恢復、Gym、16K LSD
 
-- Phase 1：亮粉紅
-- Phase 2：天空藍
-- Phase 3：橘色
-- Phase 4：Tiffany Green
+## 新增 CLASS 類型
 
-## 週節奏
+V1.3 新增：
 
-目前核心週節奏大致為：
+- `RUN`：自主跑步主課
+- `CLASS`：跑班 / 教練課
+- `STRENGTH`：跑者專項肌力
+- `GYM`：一般健身房重訓
+- `RECOVERY`：恢復 / Mobility
 
-- 週二：RUN
-- 週三：STRENGTH
-- 週四：RUN 品質課
-- 週五：GYM + RECOVERY
-- 週日：RUN LSD
+`CLASS` 在畫面上會獨立標示，但完成率會併入 RUN 計算。
 
-這不是要求每天都高強度。週三肌力刻意控制在 RPE 6–7 左右；週五 Gym 以上肢 / Core 為主，避免影響週日 LSD。
+`RECOVERY` 可以打勾記錄，但不列入正式訓練完成率，避免休息恢復日把完成率灌高。
 
-> 2026/12/30–2027/01/02 原本設定無法訓練，V1.2 不會硬塞正式 Strength / Gym 課進這段期間。
+## 10/21 跑班原則
 
-## 首頁完成度
+10/21 起，教練課優先於網站原本的品質課。
 
-正式 Phase 開始後，首頁會分開顯示：
+如果教練當天已安排 Tempo / Interval / Hill 等品質刺激，隔天不再自行補第二堂品質跑。
 
-- Overall
-- RUN
-- STRENGTH
-- GYM
+目前 V1.3 只先放 **10/21 第一堂 CLASS**。後續跑班確定每週內容後，再把實際 Coach Session 填進 `training.json`，避免先猜教練課內容。
 
-現在仍在 Pre-season 時，也會先顯示整套正式課表已排入多少 RUN / STRENGTH / GYM。
+## Phase 1 新週次
+
+- Week 1：10/12–10/18
+- Week 2：10/19–10/25
+- Week 3：10/26–11/01（原 Week 1）
+- Week 4：11/02–11/08（原 Week 2）
+- Week 5：11/09–11/15（原 Week 3）
+- Week 6：11/16–11/22（原 Week 4）
 
 ## 最常改的檔案
 
-大部分情況只要修改：
+通常只需要改：
 
 `data/training.json`
 
-程式與課表資料分離，調整某天公里數、重量、組數、雨備、疲勞版，都不用改 HTML。
-
-### 一堂 STRENGTH 的結構範例
+例如教練課內容確定後，可以找到：
 
 ```json
 {
-  "date": "2026-10-28",
-  "category": "strength",
-  "type": "STRENGTH",
-  "shortLabel": "STR",
-  "title": "跑者專項肌力｜基礎穩定",
-  "duration": "35–45 MIN"
+  "date": "2026-10-21",
+  "category": "class",
+  "type": "CLASS",
+  "title": "H2O 跑班｜Coach Session"
 }
 ```
 
-### 一堂 GYM + RECOVERY 的結構
+再把當天實際內容填入 `plans.main.steps` 即可。
 
-GYM 的 `plans` 是正式重訓內容；`recovery` 是同一天的伸展 / Mobility 收尾。
+## GitHub Pages 更新
 
-## GitHub Pages 更新方式
+如果你目前 GitHub 已經是 V1.2：
 
-如果你已經有 V1.0 / V1.1 repository：
-
-1. 解壓縮 V1.2
-2. GitHub repository → `Add file` → `Upload files`
-3. 把 V1.2 裡的檔案全部拖進去覆蓋同名檔案
-4. Commit message 可寫：`Update Tokyo 2027 to V1.2`
+1. 解壓縮 V1.3
+2. Repository → `Add file` → `Upload files`
+3. 將 V1.3 裡的檔案與資料夾全部上傳，覆蓋同名檔案
+4. Commit message 可寫：`Update Tokyo 2027 to V1.3`
 5. 等 GitHub Pages 重新部署
 
-V1.2 的 Service Worker cache 名稱也已更新，降低手機一直看到舊版快取的機率。
+不要直接上傳 zip；要上傳解壓縮後的內容。
 
 ## 完成紀錄
 
-完成紀錄仍存在瀏覽器 `localStorage`，而且沿用舊 Storage Key，所以同一個 GitHub Pages 網址、同一個瀏覽器更新 V1.2 時，原本 V1/V1.1 的打勾紀錄通常會保留。
+完成紀錄仍使用原本 localStorage key，因此同一個 GitHub Pages 網址、同一支手機與瀏覽器，更新 V1.3 後原本勾選紀錄通常會保留。
 
 ## 檔案結構
 
 ```text
-tokyo-2027-v1.2/
+tokyo-2027-v1.3/
 ├── index.html
 ├── manifest.webmanifest
 ├── sw.js
@@ -102,9 +95,3 @@ tokyo-2027-v1.2/
 └── data/
     └── training.json
 ```
-
-## 安全原則
-
-- 疲勞可以降級訓練，但疼痛、發燒、疑似受傷不硬補。
-- STRENGTH / GYM 不以做到力竭為目標。
-- 長跑與關鍵跑優先度高於額外重量訓練。

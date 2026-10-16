@@ -1,5 +1,5 @@
 {
-  "appVersion": "1.2.0",
+  "appVersion": "1.3.0",
   "raceDate": "2027-03-07",
   "phases": [
     {
@@ -7,14 +7,490 @@
       "label": "PHASE 1",
       "name": "基礎建立期",
       "color": "#ff3f9f",
-      "startDate": "2026-10-26",
+      "startDate": "2026-10-12",
       "endDate": "2026-11-22",
-      "weeks": 4,
+      "weeks": 6,
       "weeklyRuns": 3,
       "workouts": [
         {
-          "date": "2026-10-27",
+          "date": "2026-10-12",
           "week": 1,
+          "category": "recovery",
+          "type": "RECOVERY",
+          "shortLabel": "REC",
+          "title": "恢復 / Mobility",
+          "duration": "20–40 MIN",
+          "summary": "Mobility + 輕鬆走路 · 20–40 MIN",
+          "plans": {
+            "main": {
+              "title": "恢復主課表",
+              "steps": [
+                "輕鬆走路 20–30 分鐘",
+                "髖關節 Mobility 5 分鐘",
+                "踝關節 Mobility 5 分鐘",
+                "小腿、臀肌、腿後側輕鬆伸展"
+              ],
+              "note": "今天是正式計畫的起點，不需要用強度證明自己。"
+            },
+            "rain": {
+              "title": "室內恢復",
+              "steps": [
+                "室內走路或 Easy Bike 20–30 分鐘",
+                "Dead Bug 2 × 8 / side",
+                "髖與踝活動度 8–10 分鐘"
+              ],
+              "note": "保持活動即可。"
+            },
+            "fatigue": {
+              "title": "完全恢復",
+              "steps": [
+                "散步 10–20 分鐘（可選）",
+                "補水、正常進食",
+                "提早休息"
+              ],
+              "note": "若有明顯疼痛、發燒或不適，以休息為主。"
+            }
+          }
+        },
+        {
+          "date": "2026-10-13",
+          "week": 1,
+          "category": "run",
+          "type": "Easy Run",
+          "shortLabel": "EASY",
+          "title": "輕鬆跑",
+          "distanceKm": 6,
+          "summary": "6K @ 6:00–6:30 /km",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "6 KM Easy Run @ 6:00–6:30 /km",
+                "跑後步行 5 分鐘",
+                "小腿與臀部伸展 5–8 分鐘"
+              ],
+              "note": "只建立節奏，不追配速。"
+            },
+            "rain": {
+              "title": "雨備課表",
+              "steps": [
+                "飛輪 Easy 35–40 分鐘",
+                "核心 10 分鐘"
+              ],
+              "note": "以輕鬆有氧取代。"
+            },
+            "fatigue": {
+              "title": "疲勞備案",
+              "steps": [
+                "快走 7,000–9,000 步",
+                "Mobility 10 分鐘"
+              ],
+              "note": "疲勞時保留活動量即可。"
+            }
+          }
+        },
+        {
+          "date": "2026-10-14",
+          "week": 1,
+          "category": "strength",
+          "type": "STRENGTH",
+          "shortLabel": "STR",
+          "title": "跑者專項肌力｜基礎穩定",
+          "duration": "35–40 MIN",
+          "summary": "臀腿 / 小腿 / 核心 / 單腳穩定 · 35–40 MIN",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "Split Squat 2 × 8 / side",
+                "Single-leg RDL 2 × 8 / side",
+                "Standing Calf Raise 3 × 15",
+                "Tibialis Raise 2 × 15",
+                "Dead Bug 2 × 10 / side",
+                "Side Plank 2 × 30 秒 / side"
+              ],
+              "note": "RPE 6 左右，隔天仍有跑課，不做到力竭。"
+            },
+            "rain": {
+              "title": "室內版本",
+              "steps": [
+                "照主課表執行即可"
+              ],
+              "note": "本課本來就是室內訓練。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "Glute Bridge 2 × 12",
+                "Calf Raise 2 × 15",
+                "Dead Bug 2 × 8 / side",
+                "Mobility 10 分鐘"
+              ],
+              "note": "保留刺激，縮短總量。"
+            }
+          }
+        },
+        {
+          "date": "2026-10-15",
+          "week": 1,
+          "category": "run",
+          "type": "Tempo",
+          "shortLabel": "TEMPO",
+          "title": "節奏入門",
+          "distanceKm": 7,
+          "summary": "2K Easy + 3K @ 5:25–5:40 + 2K Easy",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "2 KM Easy @ 6:10–6:30 /km",
+                "3 KM Tempo @ 5:25–5:40 /km",
+                "2 KM Easy @ 6:10–6:30 /km"
+              ],
+              "note": "穩定輸出，不跑成間歇。"
+            },
+            "rain": {
+              "title": "雨備課表",
+              "steps": [
+                "飛輪 10 分鐘熱身",
+                "3 × 6 分鐘中高強度，組間 3 分鐘 Easy",
+                "收操 8–10 分鐘"
+              ],
+              "note": "模擬持續節奏。"
+            },
+            "fatigue": {
+              "title": "疲勞備案",
+              "steps": [
+                "Easy Run 5K @ 6:10–6:40 /km",
+                "或飛輪 Easy 30 分鐘"
+              ],
+              "note": "腿沉就直接降級，不硬做節奏。"
+            }
+          }
+        },
+        {
+          "date": "2026-10-16",
+          "week": 1,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Upper + Core",
+          "duration": "40–50 MIN",
+          "summary": "Upper + Core + Recovery · 40–50 MIN",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy Bike / Walk 8–10 分鐘",
+              "髖屈肌、臀肌、小腿伸展",
+              "踝關節 Mobility 5 分鐘"
+            ],
+            "note": "週日有長跑，腿部不加重。"
+          },
+          "plans": {
+            "main": {
+              "title": "GYM 主課表",
+              "steps": [
+                "Lat Pulldown 3 × 10",
+                "Chest Press 3 × 10",
+                "Seated Row 3 × 10",
+                "Shoulder Press 2 × 10",
+                "Farmer Carry 3 × 30 秒",
+                "Plank 2 × 40 秒"
+              ],
+              "note": "以上肢與核心為主。"
+            },
+            "rain": {
+              "title": "室內 / 雨備",
+              "steps": [
+                "若能到 Gym 照主課表",
+                "若不能：Push-up 3 × 10、Band Row 3 × 12、Plank 3 × 30 秒"
+              ],
+              "note": "不補重腿。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "上肢器械各 2 組",
+                "核心 8–10 分鐘",
+                "Mobility 10 分鐘"
+              ],
+              "note": "RPE 5–6。"
+            }
+          }
+        },
+        {
+          "date": "2026-10-18",
+          "week": 1,
+          "category": "run",
+          "type": "LSD",
+          "shortLabel": "LSD",
+          "title": "長距離 LSD",
+          "distanceKm": 15,
+          "summary": "14–16K @ 5:55–6:25 /km",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "14–16 KM LSD @ 5:55–6:25 /km",
+                "前半保持可對話",
+                "超過 60 分鐘開始練習補水"
+              ],
+              "note": "以 15K 為中心，狀態好可到 16K；狀態普通 14K 即可。"
+            },
+            "rain": {
+              "title": "雨備課表",
+              "steps": [
+                "飛輪 70–80 分鐘 Easy–Steady",
+                "每 20 分鐘補水",
+                "收操 10 分鐘"
+              ],
+              "note": "維持長時間有氧。"
+            },
+            "fatigue": {
+              "title": "疲勞備案",
+              "steps": [
+                "快走 60 分鐘或 10,000–12,000 步",
+                "Mobility 10 分鐘"
+              ],
+              "note": "不要為了里程硬撐。"
+            }
+          }
+        },
+        {
+          "date": "2026-10-19",
+          "week": 2,
+          "category": "recovery",
+          "type": "RECOVERY",
+          "shortLabel": "REC",
+          "title": "恢復 / Mobility",
+          "duration": "20–30 MIN",
+          "summary": "LSD 後恢復 · 20–30 MIN",
+          "plans": {
+            "main": {
+              "title": "恢復主課表",
+              "steps": [
+                "輕鬆走路 20 分鐘",
+                "小腿 / 臀肌 / 髖 Mobility 10 分鐘"
+              ],
+              "note": "讓週三跑班前保持新鮮。"
+            },
+            "rain": {
+              "title": "室內恢復",
+              "steps": [
+                "Easy Bike 20 分鐘",
+                "Mobility 10 分鐘"
+              ],
+              "note": "低強度即可。"
+            },
+            "fatigue": {
+              "title": "休息",
+              "steps": [
+                "完全休息或短散步",
+                "補水、睡眠優先"
+              ],
+              "note": "如果仍有明顯延遲性痠痛，今天不用硬做。"
+            }
+          }
+        },
+        {
+          "date": "2026-10-20",
+          "week": 2,
+          "category": "run",
+          "type": "Easy Run",
+          "shortLabel": "EASY",
+          "title": "輕鬆跑｜跑班前",
+          "distanceKm": 6,
+          "summary": "6K @ 6:00–6:30 /km",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "6 KM Easy @ 6:00–6:30 /km",
+                "不加 strides",
+                "跑後簡單伸展"
+              ],
+              "note": "目的是讓腿保持流動，不影響隔天教練課。"
+            },
+            "rain": {
+              "title": "雨備課表",
+              "steps": [
+                "飛輪 Easy 30–35 分鐘",
+                "Mobility 8 分鐘"
+              ],
+              "note": "不要做高強度。"
+            },
+            "fatigue": {
+              "title": "疲勞備案",
+              "steps": [
+                "快走 6,000–8,000 步",
+                "Mobility 10 分鐘"
+              ],
+              "note": "如果腿重，寧可把狀態留給隔天。"
+            }
+          }
+        },
+        {
+          "date": "2026-10-21",
+          "week": 2,
+          "category": "class",
+          "type": "CLASS",
+          "shortLabel": "CLASS",
+          "title": "H2O 跑班｜Coach Session",
+          "duration": "依教練課表",
+          "summary": "跑班課程 · 以教練當日安排為主",
+          "plans": {
+            "main": {
+              "title": "教練課",
+              "steps": [
+                "依當日教練課表完成",
+                "課後記錄：課程內容 / RPE / 身體感受 / 是否有疼痛",
+                "若教練安排品質課，隔天不再自行加品質跑"
+              ],
+              "note": "從今天開始，教練課優先於網站原本的品質課安排。"
+            },
+            "rain": {
+              "title": "依跑班通知",
+              "steps": [
+                "依教練當日雨備或場地調整執行"
+              ],
+              "note": "不要自行疊加第二份雨備高強度課。"
+            },
+            "fatigue": {
+              "title": "疲勞回報",
+              "steps": [
+                "到場前先向教練回報疲勞狀況",
+                "依教練建議降量 / 改 Easy / 技術課"
+              ],
+              "note": "疲勞不隱瞞，讓教練能調整。"
+            }
+          }
+        },
+        {
+          "date": "2026-10-22",
+          "week": 2,
+          "category": "recovery",
+          "type": "RECOVERY",
+          "shortLabel": "REC",
+          "title": "跑班後恢復",
+          "duration": "25–40 MIN",
+          "summary": "Easy Bike / Walk + Mobility · 25–40 MIN",
+          "plans": {
+            "main": {
+              "title": "恢復主課表",
+              "steps": [
+                "Easy Bike 或快走 25–30 分鐘",
+                "小腿、臀肌、髖與踝 Mobility 10 分鐘"
+              ],
+              "note": "不另外做 Tempo / Interval。"
+            },
+            "rain": {
+              "title": "室內恢復",
+              "steps": [
+                "Easy Bike 25–30 分鐘",
+                "Mobility 10 分鐘"
+              ],
+              "note": "低強度。"
+            },
+            "fatigue": {
+              "title": "完全恢復",
+              "steps": [
+                "休息",
+                "或散步 15–20 分鐘"
+              ],
+              "note": "若跑班後有局部疼痛，優先休息。"
+            }
+          }
+        },
+        {
+          "date": "2026-10-23",
+          "week": 2,
+          "category": "gym",
+          "type": "GYM",
+          "shortLabel": "GYM",
+          "title": "一般健身房重訓｜Upper + Core",
+          "duration": "40–50 MIN",
+          "summary": "Upper + Core · 不做重腿",
+          "recovery": {
+            "title": "RECOVERY｜伸展 / Mobility / 恢復",
+            "steps": [
+              "Easy Bike 8–10 分鐘",
+              "髖 / 小腿 / 臀肌伸展",
+              "補水與正常進食"
+            ],
+            "note": "週日 LSD 前保留腿部恢復。"
+          },
+          "plans": {
+            "main": {
+              "title": "GYM 主課表",
+              "steps": [
+                "Lat Pulldown 3 × 10",
+                "Chest Press 3 × 10",
+                "Seated Row 3 × 10",
+                "Shoulder Press 2 × 10",
+                "Farmer Carry 3 × 30 秒",
+                "Dead Bug 2 × 10 / side"
+              ],
+              "note": "不排深蹲、硬舉、腿推等重腿。"
+            },
+            "rain": {
+              "title": "室內 / 雨備",
+              "steps": [
+                "照主課表，或家中上肢＋核心 30–40 分鐘"
+              ],
+              "note": "腿部保持新鮮。"
+            },
+            "fatigue": {
+              "title": "疲勞版",
+              "steps": [
+                "上肢器械各 2 組",
+                "核心 8 分鐘",
+                "Mobility 10 分鐘"
+              ],
+              "note": "RPE 5–6。"
+            }
+          }
+        },
+        {
+          "date": "2026-10-25",
+          "week": 2,
+          "category": "run",
+          "type": "LSD",
+          "shortLabel": "LSD",
+          "title": "長距離 LSD",
+          "distanceKm": 16,
+          "summary": "16K @ 5:55–6:25 /km",
+          "plans": {
+            "main": {
+              "title": "主課表",
+              "steps": [
+                "16 KM LSD @ 5:55–6:25 /km",
+                "前半保守",
+                "練習每 40–50 分鐘補給一次（若總時間足夠）"
+              ],
+              "note": "把跑班後的恢復狀態一起納入判斷。"
+            },
+            "rain": {
+              "title": "雨備課表",
+              "steps": [
+                "飛輪 75–85 分鐘 Easy–Steady",
+                "補水",
+                "Mobility 10 分鐘"
+              ],
+              "note": "維持長時間有氧。"
+            },
+            "fatigue": {
+              "title": "疲勞備案",
+              "steps": [
+                "10–12K Easy 或快走 60 分鐘",
+                "若有局部疼痛則休息"
+              ],
+              "note": "不為了完成 16K 破壞下一週。"
+            }
+          }
+        },
+        {
+          "date": "2026-10-27",
+          "week": 3,
           "type": "Easy Run",
           "shortLabel": "EASY",
           "title": "輕鬆跑",
@@ -52,7 +528,7 @@
         },
         {
           "date": "2026-10-28",
-          "week": 1,
+          "week": 3,
           "category": "strength",
           "type": "STRENGTH",
           "shortLabel": "STR",
@@ -97,7 +573,7 @@
         },
         {
           "date": "2026-10-29",
-          "week": 1,
+          "week": 3,
           "type": "Tempo",
           "shortLabel": "TEMPO",
           "title": "節奏跑（短）",
@@ -136,7 +612,7 @@
         },
         {
           "date": "2026-10-30",
-          "week": 1,
+          "week": 3,
           "category": "gym",
           "type": "GYM",
           "shortLabel": "GYM",
@@ -193,7 +669,7 @@
         },
         {
           "date": "2026-11-01",
-          "week": 1,
+          "week": 3,
           "type": "LSD",
           "shortLabel": "LSD",
           "title": "長距離 LSD",
@@ -232,7 +708,7 @@
         },
         {
           "date": "2026-11-03",
-          "week": 2,
+          "week": 4,
           "type": "Easy Run",
           "shortLabel": "EASY",
           "title": "輕鬆跑",
@@ -270,7 +746,7 @@
         },
         {
           "date": "2026-11-04",
-          "week": 2,
+          "week": 4,
           "category": "strength",
           "type": "STRENGTH",
           "shortLabel": "STR",
@@ -315,7 +791,7 @@
         },
         {
           "date": "2026-11-05",
-          "week": 2,
+          "week": 4,
           "type": "Hill",
           "shortLabel": "HILL",
           "title": "坡跑訓練",
@@ -354,7 +830,7 @@
         },
         {
           "date": "2026-11-06",
-          "week": 2,
+          "week": 4,
           "category": "gym",
           "type": "GYM",
           "shortLabel": "GYM",
@@ -411,7 +887,7 @@
         },
         {
           "date": "2026-11-08",
-          "week": 2,
+          "week": 4,
           "type": "LSD",
           "shortLabel": "LSD",
           "title": "長距離 LSD",
@@ -450,7 +926,7 @@
         },
         {
           "date": "2026-11-10",
-          "week": 3,
+          "week": 5,
           "type": "Easy Run",
           "shortLabel": "EASY",
           "title": "輕鬆跑",
@@ -487,7 +963,7 @@
         },
         {
           "date": "2026-11-11",
-          "week": 3,
+          "week": 5,
           "category": "strength",
           "type": "STRENGTH",
           "shortLabel": "STR",
@@ -532,7 +1008,7 @@
         },
         {
           "date": "2026-11-12",
-          "week": 3,
+          "week": 5,
           "type": "Interval",
           "shortLabel": "INTVL",
           "title": "間歇節奏跑",
@@ -572,7 +1048,7 @@
         },
         {
           "date": "2026-11-13",
-          "week": 3,
+          "week": 5,
           "category": "gym",
           "type": "GYM",
           "shortLabel": "GYM",
@@ -629,7 +1105,7 @@
         },
         {
           "date": "2026-11-15",
-          "week": 3,
+          "week": 5,
           "type": "LSD",
           "shortLabel": "LSD",
           "title": "長距離 LSD",
@@ -668,7 +1144,7 @@
         },
         {
           "date": "2026-11-17",
-          "week": 4,
+          "week": 6,
           "type": "Easy Run",
           "shortLabel": "EASY",
           "title": "降載輕鬆跑",
@@ -704,7 +1180,7 @@
         },
         {
           "date": "2026-11-18",
-          "week": 4,
+          "week": 6,
           "category": "strength",
           "type": "STRENGTH",
           "shortLabel": "STR",
@@ -749,7 +1225,7 @@
         },
         {
           "date": "2026-11-19",
-          "week": 4,
+          "week": 6,
           "type": "Strides",
           "shortLabel": "STRIDE",
           "title": "輕鬆跑＋加速跑",
@@ -787,7 +1263,7 @@
         },
         {
           "date": "2026-11-20",
-          "week": 4,
+          "week": 6,
           "category": "gym",
           "type": "GYM",
           "shortLabel": "GYM",
@@ -844,7 +1320,7 @@
         },
         {
           "date": "2026-11-22",
-          "week": 4,
+          "week": 6,
           "type": "LSD",
           "shortLabel": "LSD",
           "title": "降載長距離",

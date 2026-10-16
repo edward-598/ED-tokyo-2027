@@ -1,8 +1,8 @@
 /*
-  Tokyo 2027 V1.2 Service Worker
+  Tokyo 2027 V1.3 Service Worker
   更新 CACHE_NAME 可以避免 GitHub Pages 還顯示舊版程式。
 */
-const CACHE_NAME = "tokyo-2027-v1-2";
+const CACHE_NAME = "tokyo-2027-v1-3";
 const ASSETS = [
   "./",
   "./index.html",

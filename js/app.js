@@ -1,16 +1,17 @@
 /* =========================================================
-   TOKYO 2027 - app.js (V1.2)
+   TOKYO 2027 - app.js (V1.3)
    ---------------------------------------------------------
    這支檔案是網站的「主控制器」。
 
    一般修改課表時，你幾乎不需要改這裡；
    課表內容請優先修改 data/training.json。
 
-   V1.2 的訓練分類：
-   - RUN      ：跑步主課
+   V1.3 的訓練分類：
+   - RUN      ：自主跑步主課
+   - CLASS    ：跑班 / 教練課（完成度併入 RUN）
    - STRENGTH ：跑者專項肌力（臀腿 / 小腿 / 核心 / 單腳穩定）
    - GYM      ：一般健身房重訓（Upper / Lower / Full Body）
-   - RECOVERY ：目前放在 GYM 課內作為收尾區塊
+   - RECOVERY ：恢復 / Mobility；不列入正式訓練完成率
 
    主要功能：
    1) Today 首頁
@@ -126,12 +127,13 @@ const App = {
     return Math.min(phase.weeks, Math.max(1, Math.floor(diffDays / 7) + 1));
   },
 
-  // 計算某 Phase 的總完成率，以及 RUN / STRENGTH / GYM 各自完成率。
+  // 計算某 Phase 的完成率。
+  // CLASS 視為跑步訓練的一部分，因此併入 RUN；RECOVERY 不列入正式完成率。
   getCompletionStats(phase) {
     const workouts = phase.workouts;
 
     const calc = category => {
-      const list = workouts.filter(w => w.category === category);
+      const list = workouts.filter(w => category === "run" ? ["run", "class"].includes(w.category) : w.category === category);
       const completed = list.filter(w => TokyoStorage.get(w.date)).length;
       return {
         total: list.length,
@@ -140,11 +142,12 @@ const App = {
       };
     };
 
-    const completed = workouts.filter(w => TokyoStorage.get(w.date)).length;
+    const tracked = workouts.filter(w => w.category !== "recovery");
+    const completed = tracked.filter(w => TokyoStorage.get(w.date)).length;
     return {
-      total: workouts.length,
+      total: tracked.length,
       completed,
-      percent: workouts.length ? Math.round((completed / workouts.length) * 100) : 0,
+      percent: tracked.length ? Math.round((completed / tracked.length) * 100) : 0,
       run: calc("run"),
       strength: calc("strength"),
       gym: calc("gym")
@@ -154,7 +157,13 @@ const App = {
   getAllProgramStats() {
     const workouts = this.data.phases.flatMap(p => p.workouts);
     const count = category => workouts.filter(w => w.category === category).length;
-    return { run: count("run"), strength: count("strength"), gym: count("gym") };
+    return {
+      run: count("run") + count("class"),
+      class: count("class"),
+      strength: count("strength"),
+      gym: count("gym"),
+      recovery: count("recovery")
+    };
   },
 
   getTodayWorkout(today = new Date()) {
@@ -171,16 +180,20 @@ const App = {
   categoryLabel(category) {
     return ({
       run: "RUN",
+      class: "CLASS",
       strength: "STRENGTH",
-      gym: "GYM"
+      gym: "GYM",
+      recovery: "RECOVERY"
     })[category] || category.toUpperCase();
   },
 
   categoryDescription(category) {
     return ({
       run: "跑步主課",
+      class: "跑班 / 教練課",
       strength: "跑者專項肌力",
-      gym: "一般健身房重訓"
+      gym: "一般健身房重訓",
+      recovery: "恢復 / Mobility"
     })[category] || "TRAINING";
   },
 
@@ -321,7 +334,7 @@ const App = {
         </div>
 
         <div class="training-type-legend">
-          <span>RUN 跑步</span><span>STR 跑者肌力</span><span>GYM 健身＋Recovery</span>
+          <span>RUN 自主跑</span><span>CLASS 跑班</span><span>STR 跑者肌力</span><span>GYM 健身</span><span>REC 恢復</span>
         </div>
 
         <div class="weekdays">
