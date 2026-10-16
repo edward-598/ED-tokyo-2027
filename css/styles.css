@@ -512,3 +512,350 @@ h3 { font-size: 1rem; margin-bottom: 8px; }
   .day-workout { font-size: 0.60rem; }
   .day-category { font-size: 0.50rem; letter-spacing: 0.03em; }
 }
+
+/* =========================================================
+   V1.3.5：Today Check-in / RPE / Training Record / Journey
+   ---------------------------------------------------------
+   互動只在使用者操作時出現，不加入持續動畫，避免訓練工具
+   變得太花俏，也保留手機快速讀取的特性。
+   ========================================================= */
+
+/* 今日 READY / TIRED / SORE -------------------------------- */
+.checkin-card { overflow: hidden; }
+.status-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.status-choice {
+  min-width: 0;
+  min-height: 72px;
+  padding: 11px 8px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.025);
+  text-align: left;
+  cursor: pointer;
+}
+.status-choice strong {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.status-choice span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.66rem;
+  line-height: 1.3;
+}
+.status-choice.selected {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, rgba(255,255,255,0.02));
+  color: var(--accent);
+}
+.status-recommendation {
+  margin-top: 12px;
+  padding: 13px 14px;
+  border-radius: 14px;
+  border: 1px dashed var(--line);
+  color: var(--muted);
+  background: rgba(255,255,255,0.018);
+}
+.status-recommendation.visible {
+  border-color: color-mix(in srgb, var(--accent) 42%, var(--line));
+}
+.status-recommendation strong {
+  display: block;
+  color: var(--text);
+  margin-top: 5px;
+  font-size: 0.96rem;
+}
+.status-recommendation p { margin: 6px 0 0; font-size: 0.82rem; line-height: 1.55; }
+.recommendation-kicker {
+  color: var(--accent);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.dialog-status-note {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 16px 0 4px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px dashed color-mix(in srgb, var(--accent) 42%, var(--line));
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
+.dialog-status-note > span {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
+  font-size: 0.64rem;
+  font-weight: 900;
+}
+.dialog-status-note strong { display: block; font-size: 0.82rem; }
+.dialog-status-note p { margin: 4px 0 0; color: var(--muted); font-size: 0.75rem; line-height: 1.5; }
+
+/* 完成後 RPE / Legs ----------------------------------------- */
+.feedback-panel {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.feedback-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.feedback-head h3 { margin: 4px 0 0; }
+.feedback-saved {
+  padding: 5px 8px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--success) 50%, transparent);
+  color: var(--success);
+  font-size: 0.62rem;
+  font-weight: 900;
+}
+.rpe-label {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+}
+.rpe-label strong { color: var(--text); font-size: 0.9rem; text-align: center; }
+.rpe-label span:last-child { text-align: right; }
+.rpe-slider {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.rpe-scale {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.58rem;
+  text-align: center;
+}
+.legs-question { margin: 18px 0 8px; font-size: 0.82rem; font-weight: 750; }
+.legs-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.legs-choice {
+  padding: 11px 8px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  font-size: 0.72rem;
+  font-weight: 850;
+  cursor: pointer;
+}
+.legs-choice.selected {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+.primary-button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+.session-mini-feedback {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0 12px;
+}
+.session-mini-feedback span {
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.65rem;
+  letter-spacing: .04em;
+}
+
+/* 週 / 月 Training Record ----------------------------------- */
+.record-card { overflow: hidden; }
+.range-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
+  margin-bottom: 16px;
+}
+.range-tab {
+  padding: 9px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.025);
+  color: var(--muted);
+  font-size: 0.67rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  cursor: pointer;
+}
+.range-tab.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+.record-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.record-head > div:first-child span { display: block; color: var(--muted); font-size: 0.72rem; }
+.record-head > div:first-child strong { display: block; margin-top: 5px; font-size: 2rem; line-height: 1; }
+.record-meta { display: grid; gap: 5px; text-align: right; color: var(--muted); font-size: 0.65rem; }
+.record-list { display: grid; gap: 13px; margin-top: 18px; }
+.record-row {
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr) 42px;
+  gap: 10px;
+  align-items: center;
+}
+.record-label {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  min-width: 0;
+  font-size: 0.69rem;
+  font-weight: 800;
+  letter-spacing: .03em;
+}
+.record-label span:last-child { overflow: hidden; text-overflow: ellipsis; }
+.record-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  color: #fff;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  font-size: 0.72rem;
+}
+.record-bar {
+  height: 7px;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+}
+.record-bar > div {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+}
+.record-row > strong { text-align: right; font-size: 0.72rem; }
+
+.journey-card {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.022);
+}
+.journey-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: .07em;
+}
+.journey-head strong { color: var(--accent); }
+.journey-line {
+  display: grid;
+  grid-template-columns: auto minmax(70px, 1fr) auto;
+  gap: 9px;
+  align-items: center;
+  margin-top: 18px;
+}
+.journey-start, .journey-end {
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+}
+.journey-track {
+  position: relative;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.10);
+}
+.journey-progress {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+}
+.journey-plane {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -56%);
+  color: #fff;
+  font-size: 1rem;
+  transition: left .35s ease;
+}
+.journey-card p { margin: 12px 0 0; color: var(--muted); font-size: 0.65rem; line-height: 1.45; }
+.share-record-button { width: 100%; margin-top: 12px; }
+
+/* 分享卡 Dialog --------------------------------------------- */
+.share-dialog {
+  width: min(calc(100% - 24px), 500px);
+  max-height: 92vh;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #0b0e14;
+  color: var(--text);
+  box-shadow: 0 25px 80px rgba(0,0,0,0.72);
+}
+.share-dialog::backdrop { background: rgba(0,0,0,.72); backdrop-filter: blur(6px); }
+.share-dialog-inner { padding: 18px; }
+.share-dialog-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.share-dialog-head h2 { margin-bottom: 12px; }
+.share-preview {
+  display: block;
+  width: min(100%, 280px);
+  max-height: 58vh;
+  object-fit: contain;
+  margin: 4px auto 16px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: #080a0f;
+}
+.share-actions { display: grid; gap: 8px; }
+.share-actions .secondary-button { width: 100%; }
+
+@media (max-width: 430px) {
+  .status-choice { min-height: 68px; padding: 10px 6px; }
+  .status-choice strong { font-size: 0.72rem; }
+  .status-choice span { font-size: 0.60rem; }
+  .record-head { display: block; }
+  .record-meta { grid-template-columns: repeat(3, 1fr); margin-top: 12px; text-align: left; }
+  .record-row { grid-template-columns: 96px minmax(0, 1fr) 38px; gap: 7px; }
+  .record-label { font-size: 0.62rem; }
+  .journey-line { grid-template-columns: auto minmax(50px, 1fr) auto; gap: 6px; }
+}

@@ -8,10 +8,13 @@
   <title>Tokyo 2027 Training</title>
 
   <!--
-    V1.3：10/12 起跑 + CLASS 教練課
+    V1.3.5：互動訓練紀錄 + RPE + Tokyo Journey
     1) Today：今天該做什麼
     2) Training Calendar：整體課表與完成狀態
     3) Daily Workout：RUN / CLASS / STRENGTH / GYM / RECOVERY
+    4) Today 狀態：READY / TIRED / SORE
+    5) 完成後記錄 RPE / 腿部狀態
+    6) 週 / 月統計、Tokyo Journey、分享卡
 
     Race 與 Course 先保留入口，之後再加。
   -->
@@ -57,6 +60,25 @@
   <!-- 單日課表彈出視窗 -->
   <dialog id="workoutDialog" class="workout-dialog">
     <div id="workoutDialogContent"></div>
+  </dialog>
+
+  <!-- V1.3.5：週 / 月訓練分享卡預覽 -->
+  <dialog id="shareDialog" class="share-dialog">
+    <div class="share-dialog-inner">
+      <div class="share-dialog-head">
+        <div>
+          <p class="eyebrow">TRAINING RECORD</p>
+          <h2>分享卡預覽</h2>
+        </div>
+        <button id="closeShareDialog" class="dialog-close" type="button">×</button>
+      </div>
+      <img id="sharePreview" class="share-preview" alt="Tokyo 2027 訓練分享卡預覽" />
+      <div class="share-actions">
+        <button id="nativeShareBtn" class="primary-button" type="button">分享 / 儲存圖片</button>
+        <button id="downloadShareBtn" class="secondary-button" type="button">下載 PNG</button>
+      </div>
+      <p id="shareHint" class="notice">手機支援時會開啟系統分享選單；桌機可直接下載 PNG。</p>
+    </div>
   </dialog>
 
   <script src="js/storage.js"></script>

@@ -1,110 +1,102 @@
-# Tokyo 2027 Training — V1.3.1
+# Tokyo 2027 Training — V1.3.5
 
-手機優先的個人東京馬拉松訓練儀表板。
+個人東京馬拉松訓練追蹤網站，適合直接部署到 GitHub Pages。
 
-## V1.3.1 修正
+## V1.3.5 新功能
 
-這次只修正手機版 Training Calendar 的版面問題，**沒有加入跨裝置同步**。
+### 1. Today 身體狀態
+每天打開 Today 可先選：
 
-- 將 7 欄 Calendar 改成 `repeat(7, minmax(0, 1fr))`，避免內容反向撐寬欄位
-- Calendar day 加入 `min-width: 0` 與 `overflow: hidden`
-- 較長訓練名稱允許換行，不再把星期日欄推出畫面
-- 手機 430px 以下略縮小欄距與文字
-- Service Worker cache 更新為 V1.3.1，避免 GitHub Pages 持續讀到舊 CSS
+- `READY`：建議主課表 MAIN
+- `TIRED`：建議 FATIGUE 疲勞版
+- `SORE`：優先 RECOVERY；若是局部疼痛、越動越痛、發燒或明顯不適，停止訓練並優先恢復
 
-完成紀錄仍維持原本 `localStorage`，所以同一支手機／同一瀏覽器的勾選紀錄不受這次改版影響。
+選擇會儲存在目前裝置的 localStorage。
 
+### 2. RPE + Legs Feedback
+完成一堂訓練後可記錄：
 
-## V1.3 更新重點
+- RPE：1～10
+- Legs：GOOD / HEAVY / SORE
 
-這次把正式訓練起點提前到 **2026/10/12**。
+舊版已經打勾的紀錄仍可沿用；有需要時再補 RPE / Legs 即可。
 
-Phase 1 由原本 4 週擴成 **6 週（10/12–11/22）**，後面的 Phase 2～4 日期維持不動。
+### 3. 近一週 / 近一月 Training Record
+Today 頁新增：
 
-新增兩週銜接期：
+- 整體正式訓練完成率
+- RUN 完成率
+- STRENGTH 完成率
+- GYM 完成率
+- RECOVERY 完成率
+- 完成公里數
+- 完成 Sessions
+- 平均 RPE
 
-- Week 1｜10/12–10/18：恢復、Easy、跑者肌力、節奏入門、Gym、14–16K LSD
-- Week 2｜10/19–10/25：跑班前 Easy、10/21 Coach Session、跑班後恢復、Gym、16K LSD
+`CLASS` 仍併入 RUN；`RECOVERY` 有記錄完成率，但不灌高正式 Journey 進度。
 
-## 新增 CLASS 類型
+### 4. Tokyo Journey
+Tokyo Journey = 已完成正式 Session / 全部正式 Session。
 
-V1.3 新增：
+- RUN / CLASS / STRENGTH / GYM：計入
+- RECOVERY：保留紀錄，但不計入 Journey
 
-- `RUN`：自主跑步主課
-- `CLASS`：跑班 / 教練課
-- `STRENGTH`：跑者專項肌力
-- `GYM`：一般健身房重訓
-- `RECOVERY`：恢復 / Mobility
+完成一堂正式訓練，飛機就會往 TOKYO 前進。
 
-`CLASS` 在畫面上會獨立標示，但完成率會併入 RUN 計算。
+### 5. 社群分享卡
+Training Record 可切換：
 
-`RECOVERY` 可以打勾記錄，但不列入正式訓練完成率，避免休息恢復日把完成率灌高。
+- THIS WEEK
+- THIS MONTH
 
-## 10/21 跑班原則
+並產生 9:16 PNG 分享卡。手機瀏覽器支援 Web Share 時可直接開啟系統分享選單；否則可下載 PNG。
 
-10/21 起，教練課優先於網站原本的品質課。
+## 資料保存方式
 
-如果教練當天已安排 Tempo / Interval / Hill 等品質刺激，隔天不再自行補第二堂品質跑。
+目前沒有加入跨裝置後台。
 
-目前 V1.3 只先放 **10/21 第一堂 CLASS**。後續跑班確定每週內容後，再把實際 Coach Session 填進 `training.json`，避免先猜教練課內容。
+所有個人紀錄仍存在目前瀏覽器的 `localStorage`：
 
-## Phase 1 新週次
+- 完成狀態
+- MAIN / RAIN / FATIGUE
+- READY / TIRED / SORE
+- RPE
+- GOOD / HEAVY / SORE
 
-- Week 1：10/12–10/18
-- Week 2：10/19–10/25
-- Week 3：10/26–11/01（原 Week 1）
-- Week 4：11/02–11/08（原 Week 2）
-- Week 5：11/09–11/15（原 Week 3）
-- Week 6：11/16–11/22（原 Week 4）
+所以：
 
-## 最常改的檔案
+- 同一支手機 + 同一瀏覽器：下次打開仍會保留
+- 手機與電腦：不會同步
+- 清除瀏覽器網站資料：可能清除紀錄
 
-通常只需要改：
+## 課表資料
+
+課表本身仍放在：
 
 `data/training.json`
 
-例如教練課內容確定後，可以找到：
+如果只是調整某天課表、公里數、配速或內容，優先修改這個檔案，不需要改 `app.js`。
 
-```json
-{
-  "date": "2026-10-21",
-  "category": "class",
-  "type": "CLASS",
-  "title": "H2O 跑班｜Coach Session"
-}
-```
+## GitHub Pages 更新方式
 
-再把當天實際內容填入 `plans.main.steps` 即可。
+如果已經有 V1.3.1：
 
-## GitHub Pages 更新
+1. 解壓縮 V1.3.5
+2. 把解壓後的所有檔案與資料夾上傳到原本 Repository 根目錄
+3. 覆蓋同名檔案
+4. Commit changes
+5. 等待 GitHub Pages 重新部署
 
-如果你目前 GitHub 已經是 V1.2：
+建議 Commit message：
 
-1. 解壓縮 V1.3
-2. Repository → `Add file` → `Upload files`
-3. 將 V1.3 裡的檔案與資料夾全部上傳，覆蓋同名檔案
-4. Commit message 可寫：`Update Tokyo 2027 to V1.3`
-5. 等 GitHub Pages 重新部署
+`Update Tokyo 2027 to V1.3.5 - Add status RPE journey share card`
 
-不要直接上傳 zip；要上傳解壓縮後的內容。
+## 主要檔案
 
-## 完成紀錄
-
-完成紀錄仍使用原本 localStorage key，因此同一個 GitHub Pages 網址、同一支手機與瀏覽器，更新 V1.3 後原本勾選紀錄通常會保留。
-
-## 檔案結構
-
-```text
-tokyo-2027-v1.3.1/
-├── index.html
-├── manifest.webmanifest
-├── sw.js
-├── css/
-│   └── styles.css
-├── js/
-│   ├── storage.js
-│   ├── calendar.js
-│   └── app.js
-└── data/
-    └── training.json
-```
+- `index.html`：頁面骨架、Dialog
+- `css/styles.css`：全部 UI 樣式
+- `js/app.js`：Today / Calendar / RPE / Journey / Share Card 主邏輯
+- `js/storage.js`：localStorage 個人紀錄
+- `js/calendar.js`：日曆日期工具
+- `data/training.json`：Phase 與每天課表
+- `sw.js`：PWA Cache
