@@ -1,6 +1,19 @@
-# Tokyo 2027 Training — V1.3
+# Tokyo 2027 Training — V1.3.1
 
 手機優先的個人東京馬拉松訓練儀表板。
+
+## V1.3.1 修正
+
+這次只修正手機版 Training Calendar 的版面問題，**沒有加入跨裝置同步**。
+
+- 將 7 欄 Calendar 改成 `repeat(7, minmax(0, 1fr))`，避免內容反向撐寬欄位
+- Calendar day 加入 `min-width: 0` 與 `overflow: hidden`
+- 較長訓練名稱允許換行，不再把星期日欄推出畫面
+- 手機 430px 以下略縮小欄距與文字
+- Service Worker cache 更新為 V1.3.1，避免 GitHub Pages 持續讀到舊 CSS
+
+完成紀錄仍維持原本 `localStorage`，所以同一支手機／同一瀏覽器的勾選紀錄不受這次改版影響。
+
 
 ## V1.3 更新重點
 
@@ -82,7 +95,7 @@ V1.3 新增：
 ## 檔案結構
 
 ```text
-tokyo-2027-v1.3/
+tokyo-2027-v1.3.1/
 ├── index.html
 ├── manifest.webmanifest
 ├── sw.js
