@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0b0d12" />
+
+  <!-- App / PWA 主題色 -->
+  <meta name="theme-color" content="#FFC1E0" />
+
   <meta name="description" content="Tokyo 2027 個人馬拉松訓練追蹤工具" />
   <title>Tokyo 2027 Training</title>
-
   <!--
     V1.3.5.2：互動訓練紀錄 + RPE + Tokyo Journey
     1) Today：今天該做什麼
@@ -18,8 +20,15 @@
 
     Race 與 Course 先保留入口，之後再加。
   -->
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="stylesheet" href="css/styles.css" />
+  
+  <!-- iPhone 加到主畫面時優先使用這張 -->
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+
+  <!-- PWA 設定 -->
+  <link rel="manifest" href="./manifest.webmanifest" />
+
+  <!-- 網站樣式 -->
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
   <div class="app-shell">
