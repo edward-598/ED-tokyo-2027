@@ -1,8 +1,8 @@
-# Tokyo 2027 Training — V1.3.5.1
+# Tokyo 2027 Training — V1.3.5.2
 
 個人東京馬拉松訓練追蹤網站，適合直接部署到 GitHub Pages。
 
-## V1.3.5.1 新功能
+## V1.3.5.2 新功能
 
 ### 1. Today 身體狀態
 每天打開 Today 可先選：
@@ -81,7 +81,7 @@ Training Record 可切換：
 
 如果已經有 V1.3.1：
 
-1. 解壓縮 V1.3.5.1
+1. 解壓縮 V1.3.5.2
 2. 把解壓後的所有檔案與資料夾上傳到原本 Repository 根目錄
 3. 覆蓋同名檔案
 4. Commit changes
@@ -89,7 +89,7 @@ Training Record 可切換：
 
 建議 Commit message：
 
-`Update Tokyo 2027 to V1.3.5.1 - Add status RPE journey share card`
+`Update Tokyo 2027 to V1.3.5.2 - Add status RPE journey share card`
 
 ## 主要檔案
 

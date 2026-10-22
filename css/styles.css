@@ -115,6 +115,28 @@ h3 { font-size: 1rem; margin-bottom: 8px; }
 .hero-title { margin: 16px 0 8px; font-size: 2rem; line-height: 1.05; }
 .hero-subtitle { color: var(--muted); margin-bottom: 18px; }
 
+.race-countdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: -2px 0 16px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.025);
+  color: var(--muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+.race-countdown strong {
+  flex: 0 0 auto;
+  color: var(--text);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+}
+
+
 .progress-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; }
 .progress-track {
   height: 10px;

@@ -233,12 +233,21 @@ const App = {
     if (currentPhase) {
       const week = this.getPhaseWeek(currentPhase, today);
       const stats = this.getCompletionStats(currentPhase);
+      const raceDate = TokyoCalendar.parseISODate(this.data.raceDate);
+      const todayStart = new Date();
+      todayStart.setHours(0, 0, 0, 0);
+      const daysToRace = Math.max(0, Math.ceil((raceDate - todayStart) / 86400000));
 
       heroHTML = `
         <section class="card hero-card" style="--accent:${currentPhase.color}">
           <span class="phase-pill">${currentPhase.label}</span>
           <h2 class="hero-title">${currentPhase.name}</h2>
           <p class="hero-subtitle">Week ${week} / ${currentPhase.weeks}</p>
+
+          <div class="race-countdown" aria-label="距離東京馬還有 ${daysToRace} 天">
+            <span>TOKYO MARATHON · 2027.03.07</span>
+            <strong>${daysToRace} DAYS</strong>
+          </div>
 
           <div class="progress-row">
             <div class="progress-track"><div class="progress-fill" style="width:${stats.percent}%"></div></div>
