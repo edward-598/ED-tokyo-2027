@@ -56,9 +56,13 @@ button { color: inherit; }
   justify-content: space-between;
   align-items: center;
   padding: max(18px, env(safe-area-inset-top)) 18px 14px;
-  background: rgba(7, 9, 13, 0.82);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid var(--line);
+
+  background: rgba(7, 9, 13, 0.62);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .eyebrow {
